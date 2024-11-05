@@ -1,7 +1,7 @@
-import featureIcon1 from '../assets/images/features-icon-1.png';
-import featureIcon2 from '../assets/images/features-icon-2.png';
-import featureIcon3 from '../assets/images/features-icon-3.png';
-import featureIcon4 from '../assets/images/features-icon-4.png';
+import featureIcon1 from '../assets/images/delivery-truck-unscreen.gif';
+import featureIcon2 from '../assets/images/container-ship-unscreen.gif';
+import featureIcon3 from '../assets/images/aircraft-unscreen.gif';
+import featureIcon4 from '../assets/images/eco-earth-unscreen.gif'; // Add your fourth icon path
 import shape1 from '../assets/images/shape-7.png';
 import shape2 from '../assets/images/shape-8.png';
 
@@ -22,14 +22,14 @@ const FeaturesSection = () => {
                   width="100"
                   height="80"
                   loading="lazy"
-                  alt="Hygienic Food icon"
+                  alt="Seafood Trading by Road"
                 />
               </div>
 
-              <h3 className="title-2 card-title">Hygienic Food</h3>
+              <h3 className="title-2 card-title">Seafood Trading by Road</h3>
 
               <p className="label-1 card-text">
-                Lorem Ipsum is simply dummy printing and typesetting.
+                Frozen and Fresh Seafood are transported via road to the local market under controlled temperature to keep the seafood fresh.
               </p>
             </div>
           </li>
@@ -42,14 +42,14 @@ const FeaturesSection = () => {
                   width="100"
                   height="80"
                   loading="lazy"
-                  alt="Fresh Environment icon"
+                  alt="Seafood Import/Export via Sea"
                 />
               </div>
 
-              <h3 className="title-2 card-title">Fresh Environment</h3>
+              <h3 className="title-2 card-title">Seafood Import/Export via Sea</h3>
 
               <p className="label-1 card-text">
-                Lorem Ipsum is simply dummy printing and typesetting.
+                Asmak Muscat Int&apos;l uses the sea route to import/export seafood in large quantities from various countries. The seafood will be stored in special containers to keep it fresh.
               </p>
             </div>
           </li>
@@ -62,18 +62,19 @@ const FeaturesSection = () => {
                   width="100"
                   height="80"
                   loading="lazy"
-                  alt="Skilled Chefs icon"
+                  alt="Seafood Import/Export via Air"
                 />
               </div>
 
-              <h3 className="title-2 card-title">Skilled Chefs</h3>
+              <h3 className="title-2 card-title">Seafood Import/Export via Air</h3>
 
               <p className="label-1 card-text">
-                Lorem Ipsum is simply dummy printing and typesetting.
+                We strive for continuous improvement in the supply chain in order to secure the highest quality of fresh/frozen seafood products. We use air transport for immediate delivery.
               </p>
             </div>
           </li>
 
+          {/* New Card */}
           <li className="feature-item">
             <div className="feature-card">
               <div className="card-icon">
@@ -82,14 +83,14 @@ const FeaturesSection = () => {
                   width="100"
                   height="80"
                   loading="lazy"
-                  alt="Event & Party icon"
+                  alt="Sustainable Practices"
                 />
               </div>
 
-              <h3 className="title-2 card-title">Event & Party</h3>
+              <h3 className="title-2 card-title">Sustainable Practices</h3>
 
               <p className="label-1 card-text">
-                Lorem Ipsum is simply dummy printing and typesetting.
+                We prioritize sustainable practices in our operations, ensuring that seafood is sourced responsibly and ethically.
               </p>
             </div>
           </li>

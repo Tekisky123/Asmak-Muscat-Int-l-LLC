@@ -1,4 +1,4 @@
-import specialDishBanner from "../assets/images/special-dish-banner.jpg";
+import specialDishBanner from "../assets/images/flag.jpeg";
 import badge from "../assets/images/badge-1.png";
 import shape1 from "../assets/images/shape-4.png";
 import shape2 from "../assets/images/shape-9.png";
@@ -9,35 +9,33 @@ const SpecialDishSection = () => {
       <div className="special-dish-banner">
         <img
           src={specialDishBanner}
-          width="940"
-          height="900"
+         
           loading="lazy"
-          alt="special dish"
+          alt="Asmak Muscat International"
           className="img-cover"
         />
       </div>
 
       <div className="special-dish-content bg-black-10">
         <div className="container">
-          <img src={badge} width="28" height="41" loading="lazy" alt="badge" className="abs-img" />
+          <img src={badge} width="28" height="41" loading="lazy" alt="quality badge" className="abs-img" />
 
-          <p className="section-subtitle label-2">Special Dish</p>
+          <p className="section-subtitle label-2">Asmak Muscat International</p>
 
-          <h2 className="headline-1 section-title">Lobster Tortellini</h2>
+          <h2 className="headline-1 section-title">Sustainable Seafood Excellence</h2>
 
           <p className="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy text ever since the when an unknown printer took a galley of type.
+            Located in Oman, Asmak Muscat Int&apos;l collaborates with local fishing communities to provide fresh,
+            high-quality seafood while maintaining sustainability in the pristine waters of the Indian Ocean.
+            We ensure each product meets the highest standards, whether it’s delivered fresh or frozen, 
+            by road, sea, or air to markets worldwide.
           </p>
 
-          <div className="wrapper">
-            <del className="del body-3">$40.00</del>
-            <span className="span body-1">$20.00</span>
-          </div>
+         
 
-          <a href="#" className="btn btn-primary">
-            <span className="text text-1">View All Menu</span>
-            <span className="text text-2" aria-hidden="true">View All Menu</span>
+          <a href="mailto:info@asmkmct.com" className="btn btn-primary">
+            <span className="text text-1">Contact Us</span>
+            <span className="text text-2" aria-hidden="true">Contact Us</span>
           </a>
         </div>
       </div>

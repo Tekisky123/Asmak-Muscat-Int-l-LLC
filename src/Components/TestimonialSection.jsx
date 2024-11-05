@@ -5,12 +5,12 @@ const TestimonialSection = () => {
       className="section testi text-center has-bg-image"
       aria-label="testimonials"
     >
-      <div className="container">
+      <div className="testi-container">
         <div className="quote">”</div>
 
         <p className="headline-2 testi-text">
-          I wanted to thank you for inviting me down for that amazing dinner the
-          other night. The food was extraordinary.
+          The service was fantastic, and I can&apos;t wait to come back again.
+          Highly recommended!
         </p>
 
         <div className="wrapper">

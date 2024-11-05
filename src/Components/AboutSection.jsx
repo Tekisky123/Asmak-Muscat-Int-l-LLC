@@ -1,8 +1,7 @@
-import  { useEffect } from "react";
-import aboutBanner from "../assets/images/about-banner.jpg";
-import aboutAbsImage from "../assets/images/about-abs-image.jpg";
-import badge from "../assets/images/badge-2.png";
-import shape from "../assets/images/shape-3.png";
+import { useEffect } from "react";
+import aboutBanner from "../assets/images/aboutimg.png";
+import aboutAbsImage from "../assets/images/aboutimg2.png";
+import shape from "../assets/images/aboutshape.png";
 
 const AboutSection = () => {
   useEffect(() => {
@@ -34,19 +33,19 @@ const AboutSection = () => {
     <section className="section about text-center" aria-labelledby="about-label" id="about">
       <div className="container">
         <div className="about-content">
-          <p className="label-2 section-subtitle" id="about-label">Our Story</p>
-          <h2 className="headline-1 section-title">Every Flavor Tells a Story</h2>
+          <p className="label-2 section-subtitle" id="about-label">Our Journey</p>
+          <h2 className="headline-1 section-title">Seafood Excellence Since Inception</h2>
           <p className="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy text ever since the when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book. It has survived not only five centuries, but also the leap into.
+            Asmak Muscat Int&apos;l has been a cornerstone in the seafood industry, committed to delivering the highest quality
+            seafood sourced directly from Oman’s pristine waters. Our journey began with a vision to provide fresh, frozen, 
+            and expertly handled seafood to local and global markets, adhering to sustainability and quality at every step.
           </p>
 
-          <div className="contact-label">Book Through Call</div>
-          <a href="tel:+804001234567" className="body-1 contact-number hover-underline">+80 (400) 123 4567</a>
+          <div className="contact-label">For Orders & Inquiries</div>
+          <a href="tel:+96812345678" className="body-1 contact-number hover-underline">+968 123 45678</a>
           <a href="#" className="btn btn-primary">
-            <span className="text text-1">Read More</span>
-            <span className="text text-2" aria-hidden="true">Read More</span>
+            <span className="text text-1">Learn More</span>
+            <span className="text text-2" aria-hidden="true">Learn More</span>
           </a>
         </div>
 
@@ -56,20 +55,20 @@ const AboutSection = () => {
             width="570"
             height="570"
             loading="lazy"
-            alt="about banner"
+            alt="about banner showcasing seafood"
             className="w-100"
             data-parallax-item
             data-parallax-speed="1"
           />
           <div className="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
-            <img src={aboutAbsImage} width="285" height="285" loading="lazy" alt="" className="w-100" />
+            <img src={aboutAbsImage} width="285" height="285" loading="lazy" alt="fresh seafood display" className="w-100" />
           </div>
-          <div className="abs-img abs-img-2 has-before">
-            <img src={badge} width="133" height="134" loading="lazy" alt="" />
-          </div>
+          {/* <div className="abs-img abs-img-2 has-before">
+            <img src={badge} width="133" height="134" loading="lazy" alt="quality badge" />
+          </div> */}
         </figure>
 
-        <img src={shape} width="197" height="194" loading="lazy" alt="" className="shape" />
+        <img src={shape} width="227" height="224" loading="lazy" alt="decorative shape" className="shape" />
       </div>
     </section>
   );

@@ -4,14 +4,10 @@ const ReservationSection = () => {
       <div className="container">
         <div className="form reservation-form bg-black-10">
           <form action="" className="form-left">
-            <h2 className="headline-1 text-center">Online Reservation</h2>
+            <h2 className="headline-1 text-center">Contact Us</h2>
 
             <p className="form-text text-center">
-              Booking request{" "}
-              <a href="tel:+88123123456" className="link">
-                +88-123-123456
-              </a>{" "}
-              or fill out the order form
+              Get in touch with us today!
             </p>
 
             <div className="input-wrapper">
@@ -21,65 +17,27 @@ const ReservationSection = () => {
                 placeholder="Your Name"
                 autoComplete="off"
                 className="input-field"
+                required
               />
               <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
+                type="email"
+                name="email"
+                placeholder="Your Email"
                 autoComplete="off"
                 className="input-field"
+                required
               />
             </div>
 
-            <div className="input-wrapper">
-              <div className="icon-wrapper">
-                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                <select name="person" className="input-field">
-                  <option value="1-person">1 Person</option>
-                  <option value="2-person">2 Person</option>
-                  <option value="3-person">3 Person</option>
-                  <option value="4-person">4 Person</option>
-                  <option value="5-person">5 Person</option>
-                  <option value="6-person">6 Person</option>
-                  <option value="7-person">7 Person</option>
-                </select>
-                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-              </div>
-
-              <div className="icon-wrapper">
-                <ion-icon
-                  name="calendar-clear-outline"
-                  aria-hidden="true"
-                ></ion-icon>
-                <input
-                  type="date"
-                  name="reservation-date"
-                  className="input-field"
-                />
-                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-              </div>
-
-              <div className="icon-wrapper">
-                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                <select name="time" className="input-field">
-                  <option value="08:00am">08:00 am</option>
-                  <option value="09:00am">09:00 am</option>
-                  <option value="10:00am">10:00 am</option>
-                  <option value="11:00am">11:00 am</option>
-                  <option value="12:00am">12:00 am</option>
-                  <option value="01:00pm">01:00 pm</option>
-                  <option value="02:00pm">02:00 pm</option>
-                  <option value="03:00pm">03:00 pm</option>
-                  <option value="04:00pm">04:00 pm</option>
-                  <option value="05:00pm">05:00 pm</option>
-                  <option value="06:00pm">06:00 pm</option>
-                  <option value="07:00pm">07:00 pm</option>
-                  <option value="08:00pm">08:00 pm</option>
-                  <option value="09:00pm">09:00 pm</option>
-                  <option value="10:00pm">10:00 pm</option>
-                </select>
-                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-              </div>
+            <div className="">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                autoComplete="off"
+                className="input-field"
+                required
+              />
             </div>
 
             <textarea
@@ -87,48 +45,48 @@ const ReservationSection = () => {
               placeholder="Message"
               autoComplete="off"
               className="input-field"
+              required
             ></textarea>
 
             <button type="submit" className="btn btn-secondary">
-              <span className="text text-1">Book A Table</span>
+              <span className="text text-1">Send Request</span>
               <span className="text text-2" aria-hidden="true">
-                Book A Table
+                Send Request
               </span>
             </button>
           </form>
 
-          <div
-            className="form-right text-center"
-           
-          >
-            <h2 className="headline-1 text-center">Contact Us</h2>
+          <div className="form-right text-center">
+            <h2 className="headline-1 text-center">Contact Details</h2>
 
-            <p className="contact-label">Booking Request</p>
-            <a
-              href="tel:+88123123456"
-              className="body-1 contact-number hover-underline"
-            >
-              +88-123-123456
+            <p className="contact-label">Mobile</p>
+            <a href="tel:+96892850600" className="body-1 contact-number hover-underline">
+              +968 92850600
+            </a>
+
+            <p className="contact-label">Tel</p>
+            <a href="tel:+96824050604" className="body-1 contact-number hover-underline">
+              +968 24050604
             </a>
 
             <div className="separator"></div>
 
-            <p className="contact-label">Location</p>
+            <p className="contact-label">Address</p>
             <address className="body-4">
-              Restaurant St, Delicious City, <br />
-              London 9578, UK
+              P.O.BOX 1741 <br />
+              Postal Code 122 <br />
+              Al Mabela, Sultanate of Oman <br />
+              C.R. No 1341511
             </address>
 
-            <p className="contact-label">Lunch Time</p>
-            <p className="body-4">
-              Monday to Sunday <br />
-              11.00 am - 2.30 pm
-            </p>
+            <p className="contact-label">Email</p>
+            <a href="mailto:info@asmakmct.com" className="body-1 contact-number hover-underline">
+              info@asmakmct.com
+            </a>
 
-            <p className="contact-label">Dinner Time</p>
+            <p className="contact-label">Need more details?</p>
             <p className="body-4">
-              Monday to Sunday <br />
-              05.00 pm - 10.00 pm
+              Contact us and we’ll call you back.
             </p>
           </div>
         </div>

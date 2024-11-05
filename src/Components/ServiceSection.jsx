@@ -1,51 +1,50 @@
-import service1 from '../assets/images/service-1.jpg';
-import service2 from '../assets/images/service-2.jpg';
-import service3 from '../assets/images/service-3.jpg';
-import shape1 from '../assets/images/shape-1.png';
-import shape2 from '../assets/images/shape-2.png';
+import service1 from '../assets/images/fish1.jpeg';
+import service2 from '../assets/images/fish2.jpeg';
+import service3 from '../assets/images/fish3.jpeg';
+import shape1 from '../assets/images/fishshape2.png';
+import shape2 from '../assets/images/fishshape1.png';
 
 const ServiceSection = () => {
   const services = [
     {
       id: 1,
       image: service1,
-      alt: 'Breakfast',
-      title: 'Breakfast',
+      alt: 'Fresh Seafood',
+      title: 'Fresh Seafood',
       link: '#',
-      linkText: 'View Menu',
+      linkText: 'View Products',
       width: 285,
       height: 336,
     },
     {
       id: 2,
       image: service2,
-      alt: 'Appetizers',
-      title: 'Appetizers',
+      alt: 'Frozen Seafood',
+      title: 'Frozen Seafood',
       link: '#',
-      linkText: 'View Menu',
+      linkText: 'View Products',
       width: 285,
       height: 336,
     },
     {
       id: 3,
       image: service3,
-      alt: 'Drinks',
-      title: 'Drinks',
+      alt: 'Seafood Export',
+      title: 'Seafood Export',
       link: '#',
-      linkText: 'View Menu',
+      linkText: 'Learn More',
       width: 285,
       height: 336,
     },
   ];
 
   return (
-    <section className="section service bg-black-10 text-center" aria-label="service">
+    <section className="section service bg-seafood text-center" aria-label="service">
       <div className="container">
-        <p className="section-subtitle label-2">Flavors For Royalty</p>
-        <h2 className="headline-1 section-title">We Offer Top Notch</h2>
+        <p className="section-subtitle label-2">Seafood Excellence</p>
+        <h2 className="headline-1 section-title">Premium Seafood Services</h2>
         <p className="section-text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the
-          industry&apos;s standard dummy text ever.
+          At Asmak Muscat Int&apos;l, we specialize in offering fresh and frozen seafood, ensuring the highest quality products sourced directly from Oman’s pristine waters.
         </p>
 
         <ul className="grid-list">
@@ -89,7 +88,7 @@ const ServiceSection = () => {
           width="246"
           height="412"
           loading="lazy"
-          alt="shape"
+          alt="fish shape"
           className="shape shape-1 move-anim"
         />
         <img
@@ -97,7 +96,7 @@ const ServiceSection = () => {
           width="343"
           height="345"
           loading="lazy"
-          alt="shape"
+          alt="fish shape"
           className="shape shape-2 move-anim"
         />
       </div>
