@@ -1,7 +1,8 @@
 import specialDishBanner from "../assets/images/flag.jpeg";
 import badge from "../assets/images/badge-1.png";
-import shape1 from "../assets/images/shape-4.png";
-import shape2 from "../assets/images/shape-9.png";
+import shape1 from "../assets/images/shape1.png";
+import shape2 from "../assets/images/fishshape1.png";
+import { Link } from "react-router-dom";
 
 const SpecialDishSection = () => {
   return (
@@ -33,14 +34,14 @@ const SpecialDishSection = () => {
 
          
 
-          <a href="mailto:info@asmkmct.com" className="btn btn-primary">
+          <Link to="mailto:info@asmkmct.com" className="btn btn-primary">
             <span className="text text-1">Contact Us</span>
             <span className="text text-2" aria-hidden="true">Contact Us</span>
-          </a>
+          </Link>
         </div>
       </div>
 
-      <img src={shape1} width="179" height="359" loading="lazy" alt="" className="shape shape-1" />
+      <img src={shape1} width="379" height="459" loading="lazy" alt="" className="shape shape-1" />
       <img src={shape2} width="351" height="462" loading="lazy" alt="" className="shape shape-2" />
     </section>
   );

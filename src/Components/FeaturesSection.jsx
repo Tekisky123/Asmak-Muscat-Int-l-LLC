@@ -2,8 +2,8 @@ import featureIcon1 from '../assets/images/delivery-truck-unscreen.gif';
 import featureIcon2 from '../assets/images/container-ship-unscreen.gif';
 import featureIcon3 from '../assets/images/aircraft-unscreen.gif';
 import featureIcon4 from '../assets/images/eco-earth-unscreen.gif'; // Add your fourth icon path
-import shape1 from '../assets/images/shape-7.png';
-import shape2 from '../assets/images/shape-8.png';
+import shape1 from '../assets/images/shape1.png';
+import shape2 from '../assets/images/shape1.png';
 
 const FeaturesSection = () => {
   return (

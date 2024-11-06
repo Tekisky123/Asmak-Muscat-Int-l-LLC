@@ -1,8 +1,9 @@
 import service1 from '../assets/images/fish1.jpeg';
 import service2 from '../assets/images/fish2.jpeg';
 import service3 from '../assets/images/fish3.jpeg';
-import shape1 from '../assets/images/fishshape2.png';
-import shape2 from '../assets/images/fishshape1.png';
+import shape1 from '../assets/images/shape1.png';
+import shape2 from '../assets/images/shape1.png';
+import { Link } from 'react-router-dom';
 
 const ServiceSection = () => {
   const services = [
@@ -51,7 +52,7 @@ const ServiceSection = () => {
           {services.map((service) => (
             <li key={service.id}>
               <div className="service-card">
-                <a href={service.link} className="has-before hover:shine">
+                <Link to={service.link} className="has-before hover:shine">
                   <figure
                     className="card-banner img-holder"
                     style={{
@@ -68,15 +69,15 @@ const ServiceSection = () => {
                       className="img-cover"
                     />
                   </figure>
-                </a>
+                </Link>
 
                 <div className="card-content">
                   <h3 className="title-4 card-title">
-                    <a href={service.link}>{service.title}</a>
+                    <Link to={service.link}>{service.title}</Link>
                   </h3>
-                  <a href={service.link} className="btn-text hover-underline label-2">
+                  <Link to={service.link} className="btn-text hover-underline label-2">
                     {service.linkText}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>

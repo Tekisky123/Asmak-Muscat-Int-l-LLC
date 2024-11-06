@@ -1,33 +1,39 @@
-import eventImage1 from '../assets/images/event-1.jpg';
-import eventImage2 from '../assets/images/event-2.jpg';
-import eventImage3 from '../assets/images/event-3.jpg';
+import eventImage1 from '../assets/images/Seafood Quality.jpg';
+import eventImage2 from '../assets/images/Frozen.webp';
+import eventImage3 from '../assets/images/Quality.jpg';
+import { Link } from 'react-router-dom';
 
 const EventSection = () => {
   return (
     <section className="section event bg-black-10" aria-label="event">
       <div className="container">
-        <p className="section-subtitle label-2 text-center">Recent Updates</p>
+        <p className="section-subtitle label-2 text-center">Our Quality</p>
+        <h2 className="section-title headline-1 text-center">Our Premium Quality Products</h2>
 
-        <h2 className="section-title headline-1 text-center">Upcoming Event</h2>
+        {/* "Our Quality" Content Section */}
+        <div className="quality-section text-center my-8">
+          {/* <h3 className="headline-2 mb-4"></h3> */}
+          <p className="label-1 mx-auto max-w-2xl">
+            Consumers today demand high-quality seafood year-round, and we ensure this at every step with sustainable methods aimed at a better tomorrow. ASMAK is extremely cautious about hygiene and the meticulous processing of marine products. Every item undergoes strict quality control, so our customers enjoy only the finest, whether fresh or frozen. All products from our facility are handled with care and transported under optimal conditions to clients across the globe.
+          </p>
+        </div>
 
         <ul className="grid-list">
           <li>
             <div className="event-card has-before hover:shine">
-              <div className="card-banner img-holder" style={{ '--width': '350px', '--height': '450px' }}>
+              <div className="card-banner img-holder2">
                 <img
                   src={eventImage1}
-                  width="350"
-                  height="450"
+                
                   loading="lazy"
-                  alt="Flavour so good you’ll try to eat with your eyes."
+                  alt="Premium quality seafood."
                   className="img-cover"
                 />
-                <time className="publish-date label-2" dateTime="2022-09-15">15/09/2022</time>
               </div>
               <div className="card-content">
-                <p className="card-subtitle label-2 text-center">Food, Flavour</p>
+                <p className="card-subtitle label-2 text-center">Seafood Quality</p>
                 <h3 className="card-title title-2 text-center">
-                  Flavour so good you’ll try to eat with your eyes.
+                  Sourced with care, delivered with excellence.
                 </h3>
               </div>
             </div>
@@ -35,21 +41,20 @@ const EventSection = () => {
 
           <li>
             <div className="event-card has-before hover:shine">
-              <div className="card-banner img-holder" style={{ '--width': '350px', '--height': '450px' }}>
+              <div className="card-banner img-holder2" style={{ '--width': '350px', '--height': '450px' }}>
                 <img
                   src={eventImage2}
                   width="350"
                   height="450"
                   loading="lazy"
-                  alt="Healthy Food."
+                  alt="High-grade frozen fish."
                   className="img-cover"
                 />
-                <time className="publish-date label-2" dateTime="2022-09-08">08/09/2022</time>
               </div>
               <div className="card-content">
-                <p className="card-subtitle label-2 text-center">Healthy Food</p>
+                <p className="card-subtitle label-2 text-center">Frozen Freshness</p>
                 <h3 className="card-title title-2 text-center">
-                  Flavour so good you’ll try to eat with your eyes.
+                  Ensuring freshness from ocean to plate.
                 </h3>
               </div>
             </div>
@@ -57,31 +62,30 @@ const EventSection = () => {
 
           <li>
             <div className="event-card has-before hover:shine">
-              <div className="card-banner img-holder" style={{ '--width': '350px', '--height': '450px' }}>
+              <div className="card-banner img-holder2" style={{ '--width': '350px', '--height': '450px' }}>
                 <img
                   src={eventImage3}
                   width="350"
                   height="450"
                   loading="lazy"
-                  alt="Recipie."
+                  alt="Processed under strict quality control."
                   className="img-cover"
                 />
-                <time className="publish-date label-2" dateTime="2022-09-03">03/09/2022</time>
               </div>
               <div className="card-content">
-                <p className="card-subtitle label-2 text-center">Recipie</p>
+                <p className="card-subtitle label-2 text-center">Quality Control</p>
                 <h3 className="card-title title-2 text-center">
-                  Flavour so good you’ll try to eat with your eyes.
+                  Stringent quality standards in every product.
                 </h3>
               </div>
             </div>
           </li>
         </ul>
 
-        <a href="#" className="btn btn-primary">
-          <span className="text text-1">View Our Blog</span>
-          <span className="text text-2" aria-hidden="true">View Our Blog</span>
-        </a>
+        <Link to="" className="btn btn-primary">
+          <span className="text text-1">Learn More</span>
+          <span className="text text-2" aria-hidden="true">Learn More</span>
+        </Link>
       </div>
     </section>
   );

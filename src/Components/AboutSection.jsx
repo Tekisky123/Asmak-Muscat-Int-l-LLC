@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import aboutBanner from "../assets/images/aboutimg.png";
 import aboutAbsImage from "../assets/images/aboutimg2.png";
-import shape from "../assets/images/aboutshape.png";
+import shape from "../assets/images/shape2.png";
+import { Link } from "react-router-dom";
+
 
 const AboutSection = () => {
   useEffect(() => {
@@ -42,11 +44,11 @@ const AboutSection = () => {
           </p>
 
           <div className="contact-label">For Orders & Inquiries</div>
-          <a href="tel:+96812345678" className="body-1 contact-number hover-underline">+968 123 45678</a>
-          <a href="#" className="btn btn-primary">
+          <Link to="tel:+96812345678" className="body-1 contact-number hover-underline">+968 123 45678</Link>
+          <Link to="#" className="btn btn-primary">
             <span className="text text-1">Learn More</span>
             <span className="text text-2" aria-hidden="true">Learn More</span>
-          </a>
+          </Link>
         </div>
 
         <figure className="about-banner">

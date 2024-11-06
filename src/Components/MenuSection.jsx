@@ -11,8 +11,9 @@ import menu9 from "../assets/images/Sardinella.jpeg";
 import menu10 from "../assets/images/Penaeus.jpg";
 import menu11 from "../assets/images/Carangoides.png";
 import menu12 from "../assets/images/Epinephelus.jpg";
-import shape5 from "../assets/images/shape-5.png";
-import shape6 from "../assets/images/shape-6.png";
+import shape5 from "../assets/images/shape1.png";
+import shape6 from "../assets/images/shape1.png";
+import { Link } from "react-router-dom";
 
 const menuData = [
   {
@@ -123,9 +124,9 @@ const MenuSection = () => {
                   <div>
                     <div className="title-wrapper">
                       <h3 className="title-3">
-                        <a href="#" className="card-title">
+                        <Link to="#" className="card-title">
                           {item.name}
-                        </a>
+                        </Link>
                       </h3>
                       <span className="label-1">{item.scientificName}</span>
                       <p className="description">{item.description}</p>{" "}

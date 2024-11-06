@@ -4,6 +4,7 @@ import heroSlider1 from "../assets/images/banner5.jpg";
 import heroSlider2 from "../assets/images/banner2.jpg";
 import heroSlider3 from "../assets/images/banner6.jpg";
 import heroIcon from "../assets/images/fish.png";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);
@@ -78,12 +79,12 @@ const HeroSection = () => {
               ))}
             </h1>
             <p className="body-2 hero-text slider-reveal">{item.text}</p>
-            <a href="#" className="btn btn-primary slider-reveal">
+            <Link to="#" className="btn btn-primary slider-reveal">
               <span className="text text-1">Explore Our Seafood</span>
               <span className="text text-2" aria-hidden="true">
                 Explore Our Seafood
               </span>
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -101,11 +102,11 @@ const HeroSection = () => {
       >
         <IoChevronForward className="ion-icon" />
       </button>
-      <a href="#" className="hero-btn has-after">
+      <Link to="#" className="hero-btn has-after">
         <img src={heroIcon} width="58" height="58" alt="booking icon" />
         
         {/* <span className="label-2 text-center span"></span> */}
-      </a>
+      </Link>
     </section>
   );
 };

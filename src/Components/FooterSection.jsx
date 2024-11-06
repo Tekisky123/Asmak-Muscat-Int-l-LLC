@@ -1,33 +1,45 @@
-import footerBg from '../assets/images/footer-bg.jpg';
-import logo from '../assets/images/logo.svg';
+import { Link } from "react-router-dom";
+import logo from "../assets/images/logo3.jpg";
+import {
+  FaFacebookF,
+  FaGooglePlusG,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 
 const FooterSection = () => {
   return (
     <footer
       className="footer section has-bg-image text-center"
-      style={{ backgroundImage: `url(${footerBg})` }}
+    
     >
       <div className="container">
         <div className="footer-top grid-list">
           <div className="footer-brand has-before has-after">
-            <a href="#" className="logo">
+            <Link to="/" className="logo">
               <img
                 src={logo}
-                width="160"
+                width="260"
                 height="50"
                 loading="lazy"
-                alt="grilli home"
+                alt="asmak muscat intl home"
               />
-            </a>
+            </Link>
 
             <address className="body-4">
-              Restaurant St, Delicious City, London 9578, UK
+              P.O.BOX 1741 POSTAL CODE 122 AL MABELA SULTANATE OF OMAN C.R.NO
+              1341511
             </address>
 
-            <a href="mailto:booking@grilli.com" className="body-4 contact-link">booking@grilli.com</a>
-            <a href="tel:+88123123456" className="body-4 contact-link">Booking Request : +88-123-123456</a>
+            <Link to="mailto:info@asmakmct.com" className="body-4 contact-link">
+              info@asmakmct.com
+            </Link>
+            <Link to="tel:+88123123456" className="body-4 contact-link">
+              Contact Us : <br />
+              Mobile : +968 92850600
+            </Link>
 
-            <p className="body-4">Open : 09:00 am - 01:00 pm</p>
+            <p className="body-4 contact-link"> Tel : +968 24050604</p>
 
             <div className="wrapper">
               <div className="separator"></div>
@@ -35,14 +47,14 @@ const FooterSection = () => {
               <div className="separator"></div>
             </div>
 
-            <p className="title-1">Get News & Offers</p>
+            <p className="title-1">Stay Connected With Us</p>
             <p className="label-1">
-              Subscribe us & Get <span className="span">25% Off.</span>
+              Enter Your Email to Get{" "}
+              <span className="span">Exclusive Offers</span>
             </p>
 
             <form action="" className="input-wrapper">
               <div className="icon-wrapper">
-                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
                 <input
                   type="email"
                   name="email_address"
@@ -53,52 +65,100 @@ const FooterSection = () => {
               </div>
               <button type="submit" className="btn btn-secondary">
                 <span className="text text-1">Subscribe</span>
-                <span className="text text-2" aria-hidden="true">Subscribe</span>
+                <span className="text text-2" aria-hidden="true">
+                  Subscribe
+                </span>
               </button>
             </form>
           </div>
 
           <ul className="footer-list">
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">Home</a>
+              <Link to="/" className="label-2 footer-link hover-underline">
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">Menus</a>
+              <Link
+                to="/about-us"
+                className="label-2 footer-link hover-underline"
+              >
+                About Us
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">About Us</a>
+              <Link
+                to="/products"
+                className="label-2 footer-link hover-underline"
+              >
+                Products
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">Our Chefs</a>
+              <Link
+                to="/location"
+                className="label-2 footer-link hover-underline"
+              >
+                Location
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">Contact</a>
+              <Link
+                to="/contact"
+                className="label-2 footer-link hover-underline"
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
 
           <ul className="footer-list">
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">Facebook</a>
+              <Link
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="label-2 footer-link hover-underline"
+              >
+                <FaTwitter className="icon" /> Twitter
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">Instagram</a>
+              <Link
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="label-2 footer-link hover-underline"
+              >
+                <FaFacebookF className="icon" /> Facebook
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">Twitter</a>
+              <Link
+                href="https://plus.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="label-2 footer-link hover-underline"
+              >
+                <FaGooglePlusG className="icon" /> Google+
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">Youtube</a>
-            </li>
-            <li>
-              <a href="#" className="label-2 footer-link hover-underline">Google Map</a>
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="label-2 footer-link hover-underline"
+              >
+                <FaLinkedinIn className="icon" /> LinkedIn
+              </Link>
             </li>
           </ul>
         </div>
 
         <div className="footer-bottom">
           <p className="copyright">
-            &copy; 2022 Grilli. All Rights Reserved | Crafted by 
-            <a href="https://github.com/codewithsadee" target="_blank" rel="noopener noreferrer" className="link"> codewithsadee</a>
+            &copy; 2019 Asmak Muscat Int&apos;l. All Rights Reserved
           </p>
         </div>
       </div>

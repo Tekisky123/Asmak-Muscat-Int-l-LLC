@@ -1,8 +1,8 @@
 import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/logo3.jpg";
 import {
   IoLocationOutline,
-  IoTimeOutline,
   IoCallOutline,
   IoMailOutline,
   IoCloseOutline,
@@ -10,6 +10,8 @@ import {
 } from "react-icons/io5";
 
 const HeaderSection = () => {
+  const location = useLocation();
+
   useEffect(() => {
     const navbar = document.querySelector("[data-navbar]");
     const navTogglers = document.querySelectorAll("[data-nav-toggler]");
@@ -51,6 +53,11 @@ const HeaderSection = () => {
     });
   }, []);
 
+  const isActive = (path) =>
+    location.pathname === path
+      ? "navbar-link hover-underline active"
+      : "navbar-link";
+
   return (
     <>
       <div className="topbar">
@@ -60,37 +67,33 @@ const HeaderSection = () => {
               <IoLocationOutline aria-hidden="true" />
             </div>
             <span className="span">
-              Restaurant St, Delicious City, London 9578, UK
+              P.O.BOX 1741 POSTAL CODE 122 AL MABELA SULTANATE OF OMAN C.R.NO
+              1341511
             </span>
           </address>
           <div className="separator"></div>
-          <div className="topbar-item item-2">
-            <div className="icon">
-              <IoTimeOutline aria-hidden="true" />
-            </div>
-            <span className="span">Daily : 8.00 am to 10.00 pm</span>
-          </div>
-          <a href="tel:+11234567890" className="topbar-item link">
+
+          <Link to="tel:+11234567890" className="topbar-item link">
             <div className="icon">
               <IoCallOutline aria-hidden="true" />
             </div>
-            <span className="span">+1 123 456 7890</span>
-          </a>
+            <span className="span">+968 92850600</span>
+          </Link>
           <div className="separator"></div>
-          <a href="mailto:booking@restaurant.com" className="topbar-item link">
+          <Link to="mailto:info@asmakmct.com" className="topbar-item link">
             <div className="icon">
-              <IoMailOutline aria-hidden="true" />
+              <IoMailOutline />
             </div>
-            <span className="span">booking@restaurant.com</span>
-          </a>
+            <span className="span">info@asmakmct.com</span>
+          </Link>
         </div>
       </div>
 
       <header className="header" data-header>
         <div className="container">
-          <a href="#" className="logo">
-            <img src={logo} width="160" height="50" alt="Grilli - Home" />
-          </a>
+          <Link to="/" className="logo">
+            <img src={logo} width="160" height="50" alt="logo" />
+          </Link>
 
           <nav className="navbar" data-navbar>
             <button
@@ -101,73 +104,45 @@ const HeaderSection = () => {
               <IoCloseOutline aria-hidden="true" />
             </button>
 
-            <a href="#" className="logo">
-              <img src={logo} width="160" height="50" alt="Grilli - Home" />
-            </a>
+            <Link to="/" className="logo">
+              <img src={logo} width="160" height="50" alt="logo" />
+            </Link>
 
             <ul className="navbar-list">
               <li className="navbar-item">
-                <a href="#home" className="navbar-link hover-underline active">
-                  <div className="separator"></div>
+                <Link to="/" className={isActive("/")}>
                   <span className="span">Home</span>
-                </a>
+                </Link>
               </li>
               <li className="navbar-item">
-                <a href="#menu" className="navbar-link hover-underline">
-                  <div className="separator"></div>
-                  <span className="span">Menus</span>
-                </a>
-              </li>
-              <li className="navbar-item">
-                <a href="#about" className="navbar-link hover-underline">
-                  <div className="separator"></div>
+                <Link to="/about-us" className={isActive("/about-us")}>
                   <span className="span">About Us</span>
-                </a>
+                </Link>
               </li>
               <li className="navbar-item">
-                <a href="#" className="navbar-link hover-underline">
-                  <div className="separator"></div>
-                  <span className="span">Our Chefs</span>
-                </a>
+                <Link to="/products" className={isActive("/products")}>
+                  <span className="span">Products</span>
+                </Link>
               </li>
               <li className="navbar-item">
-                <a href="#" className="navbar-link hover-underline">
-                  <div className="separator"></div>
-                  <span className="span">Contact</span>
-                </a>
+                <Link to="/location" className={isActive("/location")}>
+                  <span className="span">Location</span>
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to="/contact-us" className={isActive("/contact-us")}>
+                  <span className="span">Contact Us</span>
+                </Link>
               </li>
             </ul>
-
-            <div className="text-center">
-              <p className="headline-1 navbar-title">Visit Us</p>
-              <address className="body-4">
-                Restaurant St, Delicious City, <br />
-                London 9578, UK
-              </address>
-              <p className="body-4 navbar-text">Open: 9.30 am - 2.30 pm</p>
-              <a
-                href="mailto:booking@grilli.com"
-                className="body-4 sidebar-link"
-              >
-                booking@grilli.com
-              </a>
-              <div className="separator"></div>
-              <p className="contact-label">Booking Request</p>
-              <a
-                href="tel:+88123123456"
-                className="body-1 contact-number hover-underline"
-              >
-                +88-123-123456
-              </a>
-            </div>
           </nav>
 
-          <a href="#" className="btn btn-secondary">
-            <span className="text text-1">Find A Table</span>
+          <Link to="" className="btn btn-secondary">
+            <span className="text text-1">Explore Our Seafood</span>
             <span className="text text-2" aria-hidden="true">
-              Find A Table
+              Explore Our Seafood
             </span>
-          </a>
+          </Link>
 
           <button
             className="nav-open-btn"
