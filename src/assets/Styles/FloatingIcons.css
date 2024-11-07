@@ -10,7 +10,7 @@
     z-index: 99;
   }
   
-  .icon {
+  .floatingicon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,7 @@
     cursor: pointer;
   }
   
-  .icon::before {
+  .floatingicon::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -44,20 +44,20 @@
     }
   }
   
-  .icon.whatsapp {
+  .floatingicon.whatsapp {
     background-color: #25D366;
   }
   
-  .icon.call {
+  .floatingicon.call {
     background-color: #0A74DA;
   }
   
-  .icon.sms {
+  .floatingicon.sms {
     background-color: #34B7F1;
   }
 
 
-.icon .tooltip {
+.floatingicon .tooltip {
     visibility: hidden;
     width: 120px;
     background-color: #74afe5d1;
@@ -75,7 +75,7 @@
     font-size: 12px;
   }
   
-  .icon:hover .tooltip {
+  .floatingicon:hover .tooltip {
     visibility: visible;
     opacity: 1;
   }

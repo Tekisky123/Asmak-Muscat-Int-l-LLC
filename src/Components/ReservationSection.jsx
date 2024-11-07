@@ -1,11 +1,46 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 const ReservationSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const [sent, setSent] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_sjlu0s8", // EmailJS Service ID
+        "template_bopfqxn", // EmailJS Template ID
+        formData,
+        "naJYlD55aY3uWf4N4"      //EmailJS User ID
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSent(true); // Set flag to true on successful submission
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+  };
+
   return (
     <section className="reservation">
       <div className="testi-container container">
         <div className="form reservation-form bg-black-10">
-          <form action="" className="form-left">
+          <form onSubmit={handleSubmit} className="form-left">
             <h2 className="headline-1 text-center">Contact Us</h2>
 
             <p className="form-text text-center">
@@ -19,6 +54,8 @@ const ReservationSection = () => {
                 placeholder="Your Name"
                 autoComplete="off"
                 className="input-field"
+                value={formData.name}
+                onChange={handleChange}
                 required
               />
               <input
@@ -27,6 +64,8 @@ const ReservationSection = () => {
                 placeholder="Your Email"
                 autoComplete="off"
                 className="input-field"
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -38,6 +77,8 @@ const ReservationSection = () => {
                 placeholder="Subject"
                 autoComplete="off"
                 className="input-field"
+                value={formData.subject}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -47,6 +88,8 @@ const ReservationSection = () => {
               placeholder="Message"
               autoComplete="off"
               className="input-field"
+              value={formData.message}
+              onChange={handleChange}
               required
             ></textarea>
 
@@ -56,6 +99,8 @@ const ReservationSection = () => {
                 Send Request
               </span>
             </button>
+
+            {sent && <p className="text-success">Message sent successfully!</p>}
           </form>
 
           <div className="form-right text-center">
