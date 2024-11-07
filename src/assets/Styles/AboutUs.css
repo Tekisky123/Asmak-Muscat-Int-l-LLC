@@ -1,0 +1,74 @@
+
+
+.about-us-container {
+    background-color: #181818;
+    color: #f5f5f5;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 150px;
+  }
+  
+  .about-us-title {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: hsl(38, 61%, 73%);
+    letter-spacing: 1px;
+  }
+  
+  .about-us-content {
+    display: grid;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  /* Card style with modern aesthetic */
+  .about-us-card {
+    background-color: #242424;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .about-us-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .icon-container {
+    font-size: 2.5em;
+    color: hsl(38, 61%, 73%);
+    margin-bottom: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.6em;
+    color: hsl(38, 61%, 73%);
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .card-content {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #e0e0e0;
+  }
+  
+  /* Responsive grid layout */
+  @media (min-width: 768px) {
+    .about-us-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .about-us-content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
