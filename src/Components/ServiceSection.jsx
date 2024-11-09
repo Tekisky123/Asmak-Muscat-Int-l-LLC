@@ -1,8 +1,7 @@
 import service1 from '../assets/images/fish1.jpeg';
 import service2 from '../assets/images/fish2.jpeg';
 import service3 from '../assets/images/fish3.jpeg';
-import shape1 from '../assets/images/shape1.png';
-import shape2 from '../assets/images/shape1.png';
+
 import { Link } from 'react-router-dom';
 
 const ServiceSection = () => {
@@ -84,22 +83,7 @@ const ServiceSection = () => {
           ))}
         </ul>
 
-        <img
-          src={shape1}
-          width="246"
-          height="412"
-          loading="lazy"
-          alt="fish shape"
-          className="shape shape-1 move-anim"
-        />
-        <img
-          src={shape2}
-          width="343"
-          height="345"
-          loading="lazy"
-          alt="fish shape"
-          className="shape shape-2 move-anim"
-        />
+       
       </div>
     </section>
   );

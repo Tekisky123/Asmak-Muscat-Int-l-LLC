@@ -1,7 +1,7 @@
 /* Dark theme with a responsive grid layout */
 
 .product-container {
-  background-color: #181818;
+  background-color: whitesmoke;
   color: #f5f5f5;
   padding: 50px 20px;
   max-width: 1200px;
@@ -14,7 +14,7 @@
   font-size: 3em;
   text-align: center;
   margin-bottom: 30px;
-  color: hsl(38, 61%, 73%);
+  color:#1e87c8;
   letter-spacing: 1px;
 }
 
@@ -66,7 +66,7 @@
 
 .product-name {
   font-size: 1.4em;
-  color: hsl(38, 61%, 73%);
+  color: #1e87c8;
   margin-bottom: 5px;
   font-weight: 600;
 }

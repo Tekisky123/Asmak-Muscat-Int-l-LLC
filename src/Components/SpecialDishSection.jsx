@@ -1,25 +1,19 @@
 import specialDishBanner from "../assets/images/flag.jpeg";
-import badge from "../assets/images/badge-1.png";
-import shape1 from "../assets/images/shape1.png";
-import shape2 from "../assets/images/fishshape1.png";
 import { Link } from "react-router-dom";
 
 const SpecialDishSection = () => {
   return (
     <section className="special-dish text-center" aria-labelledby="dish-label">
-      <div className="special-dish-banner">
         <img
           src={specialDishBanner}
          
           loading="lazy"
           alt="Asmak Muscat International"
-          className="img-cover"
+          className=""
         />
-      </div>
 
       <div className="special-dish-content bg-black-10">
         <div className="container">
-          <img src={badge} width="28" height="41" loading="lazy" alt="quality badge" className="abs-img" />
 
           <p className="section-subtitle label-2">Asmak Muscat International</p>
 
@@ -41,8 +35,6 @@ const SpecialDishSection = () => {
         </div>
       </div>
 
-      <img src={shape1} width="379" height="459" loading="lazy" alt="" className="shape shape-1" />
-      <img src={shape2} width="351" height="462" loading="lazy" alt="" className="shape shape-2" />
     </section>
   );
 };

@@ -33,6 +33,7 @@ const aboutData = [
 
 const AboutUs = () => {
   return (
+    <>
     <div className="about-us-container">
       <h1 className="about-us-title">About Us</h1>
       <div className="about-us-content">
@@ -44,8 +45,9 @@ const AboutUs = () => {
           </div>
         ))}
       </div>
-      <AboutSection />
     </div>
+    <AboutSection />
+    </>
   );
 };
 

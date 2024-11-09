@@ -11,8 +11,7 @@ import menu9 from "../assets/images/Sardinella.jpeg";
 import menu10 from "../assets/images/Penaeus.jpg";
 import menu11 from "../assets/images/Carangoides.png";
 import menu12 from "../assets/images/Epinephelus.jpg";
-import shape5 from "../assets/images/shape1.png";
-import shape6 from "../assets/images/shape1.png";
+
 import { Link } from "react-router-dom";
 
 const menuData = [
@@ -153,22 +152,7 @@ const MenuSection = () => {
           </span>
         </button>
 
-        <img
-          src={shape5}
-          width="921"
-          height="1036"
-          loading="lazy"
-          alt="shape"
-          className="shape shape-2 move-anim"
-        />
-        <img
-          src={shape6}
-          width="343"
-          height="345"
-          loading="lazy"
-          alt="shape"
-          className="shape shape-3 move-anim"
-        />
+       
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import aboutBanner from "../assets/images/aboutimg.png";
 import aboutAbsImage from "../assets/images/aboutimg2.png";
-import shape from "../assets/images/shape2.png";
 import { Link } from "react-router-dom";
 
 
@@ -70,7 +69,6 @@ const AboutSection = () => {
           </div> */}
         </figure>
 
-        <img src={shape} width="227" height="224" loading="lazy" alt="decorative shape" className="shape" />
       </div>
     </section>
   );

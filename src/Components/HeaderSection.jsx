@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/images/logo3.jpg";
+import logo from "../assets/images/logo.png";
 import {
   IoLocationOutline,
   IoCallOutline,
@@ -56,6 +56,7 @@ const HeaderSection = () => {
       : "navbar-link";
 
   return (
+  
     <>
       <div className="topbar">
         <div className="container">
@@ -89,7 +90,7 @@ const HeaderSection = () => {
       <header className="header" data-header>
         <div className="container">
           <Link to="/" className="logo">
-            <img src={logo} width="160" height="50" alt="logo" />
+            <img src={logo} width="200" height="50" alt="logo" />
           </Link>
 
           <nav className="navbar" data-navbar>

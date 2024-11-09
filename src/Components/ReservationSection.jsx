@@ -104,7 +104,7 @@ const ReservationSection = () => {
             ></textarea>
 
             <button type="submit" className="btn btn-secondary">
-              <span className="text text-1">Send Request</span>
+              <span className="text text-1 ">Send Request</span>
               <span className="text text-2" aria-hidden="true">
                 Send Request
               </span>
