@@ -15,7 +15,7 @@
   /* Loader animation */
   .loader {
     border: 8px solid rgba(255, 255, 255, 0.3);
-    border-top: 8px solid hsl(38, 61%, 73%); /* Main color */
+    border-top: 8px solid #1e87c8; /* Main color */
     border-radius: 50%;
     width: 60px;
     height: 60px;
