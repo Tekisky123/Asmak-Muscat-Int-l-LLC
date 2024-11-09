@@ -27,6 +27,16 @@ const HeaderSection = () => {
       toggler.addEventListener("click", toggleNavbar);
     });
 
+    // Close sidebar on link click
+    const navLinks = document.querySelectorAll(".navbar-link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (navbar.classList.contains("active")) {
+          toggleNavbar();
+        }
+      });
+    });
+
     const header = document.querySelector("[data-header]");
     let lastScrollPos = 0;
 
@@ -56,7 +66,6 @@ const HeaderSection = () => {
       : "navbar-link";
 
   return (
-  
     <>
       <div className="topbar">
         <div className="container">
@@ -108,27 +117,27 @@ const HeaderSection = () => {
 
             <ul className="navbar-list">
               <li className="navbar-item">
-                <Link to="/" className={isActive("/")}>
+                <Link to="/" className={isActive("/")} data-nav-toggler>
                   <span className="span">Home</span>
                 </Link>
               </li>
               <li className="navbar-item">
-                <Link to="/about-us" className={isActive("/about-us")}>
+                <Link to="/about-us" className={isActive("/about-us")} data-nav-toggler>
                   <span className="span">About Us</span>
                 </Link>
               </li>
               <li className="navbar-item">
-                <Link to="/products" className={isActive("/products")}>
+                <Link to="/products" className={isActive("/products")} data-nav-toggler>
                   <span className="span">Products</span>
                 </Link>
               </li>
               <li className="navbar-item">
-                <Link to="/location" className={isActive("/location")}>
+                <Link to="/location" className={isActive("/location")} data-nav-toggler>
                   <span className="span">Location</span>
                 </Link>
               </li>
               <li className="navbar-item">
-                <Link to="/contact-us" className={isActive("/contact-us")}>
+                <Link to="/contact-us" className={isActive("/contact-us")} data-nav-toggler>
                   <span className="span">Contact Us</span>
                 </Link>
               </li>
