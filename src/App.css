@@ -1655,7 +1655,7 @@ textarea.input-field {
 }
 
 .footer-link {
-  color: var(--quick-silver);
+  /* color: var(--quick-silver); */
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-4);
