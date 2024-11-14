@@ -2,7 +2,7 @@ div:where(.swal2-container) div:where(.swal2-popup) {
   font-size: 1.4rem !important;
 }
 :root {
-  --gold-crayola: #1e87c8;
+  --gold-crayola: #8bb4cd;
   --quick-silver: hsla(0, 0%, 65%, 1);
   --davys-grey: hsla(30, 3%, 34%, 1);
   --smoky-black-1: hsla(40, 12%, 5%, 1);
@@ -226,7 +226,7 @@ body.nav-active {
 
 .headline-1 {
   font-size: var(--fontSize-headline-1);
-  color: #1e87c8;
+  color: #8bb4cd;
 }
 
 .headline-2 {
@@ -236,7 +236,7 @@ body.nav-active {
 
 .title-1 {
   font-size: var(--fontSize-title-1);
-  color:#1e87c8;
+  color: #8bb4cd;
 }
 
 .title-2 {
@@ -271,7 +271,6 @@ body.nav-active {
 
 .label-1 {
   font-size: var(--fontSize-label-1);
-
 }
 
 .label-2 {
@@ -661,8 +660,8 @@ body.nav-active {
 
 .topbar {
   display: none;
-  background-color: white;
-  color: black;
+  background-color: #2c3941;
+  color: white;
 }
 
 /*-----------------------------------*\
@@ -1059,131 +1058,291 @@ body.nav-active {
     font-size: 30px; /* Further adjust title size for very small screens */
   }
 }
-
-/*-----------------------------------*\
-  #SERVICE
-\*-----------------------------------*/
-
-.service .section-title {
-  margin-block-end: 16px;
-  color: #1e87c8;
-}
-
-.service .section-text {
-  margin-block-end: 40px;
+/* Service Section Styling */
+.service-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
 }
 
 .service-card {
+  background: #fff;
+  border-radius: 8px;
   overflow: hidden;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
 }
 
 .service-card .has-before {
   padding-block: 30px;
-  margin-block-end: 26px;
-  z-index: 1;
-}
-
-.service-card .has-before::before {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140px;
-  height: 100%;
-  background-image: url("../images/img-pattern.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
-  transition: var(--transition-2);
-  transition-delay: 0;
-  z-index: -1;
-  will-change: transform;
-}
-
-.service-card:is(:hover, :focus-within) .has-before::before {
-  transform: rotateY(0.5turn) translateX(50%);
-  transition-delay: 300ms;
+  margin-block-end: 20px;
 }
 
 .service-card .card-banner {
-  transition: var(--transition-2);
+  height: 300px;
+  width: 100%;
+  transition: transform 0.3s;
 }
 
-.service-card:is(:hover, :focus-within) .card-banner {
-  transform: scale(1.05);
+.service-card .card-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .service .card-title {
   margin-block-end: 12px;
-  color: #1e87c8;
+  font-size: 32px;
+  color: #8bb4cd;
 }
 
-.special-dish img {
-  height: 700px;
+.service .section-title,
+.service .section-text {
+  color: #8bb4cd;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .service-section {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
-
-.about .section-text {
-  margin-block: 15px 30px;
+/* Centered Section Styling */
+.centered-about-section {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #f5f7f9;
+  width: 100%;
+  min-height: 70vh;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.about .btn {
-  margin-inline: auto;
-  margin-block-start: 26px;
+.centered-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.section-text {
+  color: black;
+}
+/* Text Content Styling (40%) */
+.text-content {
+  flex: 0 0 40%;
 }
 
-.about .container {
-  display: grid;
-  gap: 120px;
+/* Image Content Styling (60%) */
+.image-content {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-banner {
+.image-content img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .centered-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .text-content,
+  .image-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/*-----------------------------------*\
+  #what we offer 
+\*-----------------------------------*/
+/* Offer Section Styling */
+.offer-section {
   position: relative;
-  margin-block-end: 120px;
+  background-image: url("./assets/images/bg_promo2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.about-banner > .w-100 {
-  padding-inline-start: 50px;
-}
-
-.about .abs-img {
+/* Overlay for Dimming Effect */
+.offer-overlay {
   position: absolute;
-}
-
-.about .abs-img::before {
-  z-index: -1;
-}
-
-.about .abs-img-1 {
-  bottom: -120px;
-  left: 0;
-  width: 150px;
-  padding-block: 50px;
-}
-
-.about .abs-img-2 {
-  top: -65px;
-  right: 0;
-  overflow: hidden;
-}
-
-.about .abs-img-1::before {
   top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140px;
-  background-image: url("../images/img-pattern.svg");
-  background-repeat: repeat;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.about .abs-img-2::before {
-  inset: 0;
-  background-image: url("../images/badge-2-bg.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation: rotate360 15s linear infinite;
+/* Centered Content Styling */
+.offer-content {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.offer-description {
+  margin: 20px 0;
+}
+
+/*-----------------------------------*\
+  #advantages cards 
+\*-----------------------------------*/
+
+/* Advantages Section Styling */
+.advantages-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Cards Container Styling */
+.advantages-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Card Styling */
+.advantage-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Styling */
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+.card-heading {
+  font-size: 2.2rem;
+  color: #8bb4cd;
+}
+
+.card-description {
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/*-----------------------------------*\
+  #map container
+\*-----------------------------------*/
+/* Map Section Styling */
+.map-section {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Map Frame Styling */
+.map-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Contact Card Styling */
+.map-contact-card {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  height: auto;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .map-section {
+    height: auto;
+  }
+
+  .map-container {
+    height: 50vh;
+  }
+
+  .map-contact-card {
+    display: none;
+  }
 }
 
 /*-----------------------------------*\
@@ -1274,7 +1433,7 @@ body.nav-active {
 
 .menu-card .card-banner {
   flex-shrink: 0;
-  border-radius: var(--radius-24);
+  /* border-radius: var(--radius-24); */
 }
 
 .menu-card .card-title {
@@ -1468,46 +1627,184 @@ textarea.input-field {
 /*-----------------------------------*\
   #FEATURES
 \*-----------------------------------*/
+/* Styles for the features section */
+.features-section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
 
-.features .section-title {
-  margin-block-end: 40px;
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout for feature items */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  justify-content: center;
 }
 
 .feature-card {
-  padding: 30px 20px 40px;
+  display: flex;
+  background-color: whitesmoke;
+  padding: 1.3rem;
+  border: 1px solid whitesmoke;
+  transition: all 0.4s;
+}
+.feature-card:hover {
+  background-color: white;
+}
+
+.card-left {
+  flex: 0 0 100px; /* Set image width */
+  margin-right: 1rem;
+}
+
+.card-left img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-right {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .features-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row on small screens */
+    gap: 1.5rem;
+  }
+
+
+  .card-left {
+    margin-bottom: 1rem;
+  }
+}
+
+/*-----------------------------------*\
+  #countdown section
+\*-----------------------------------*/
+
+/* Styles for the countdown section */
+.countdown-section {
+  position: relative;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  background-image: url("./assets/images/bg_counters.jpg");
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.feature-item:nth-child(2n + 1) .feature-card {
-  background-color: var(--eerie-black-3);
-  background-color: whitesmoke;
-  border: 1px solid rgba(128, 128, 128, 0.159);
+.countdown-container {
+  display: flex;
+  gap: 20rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-.feature-item:nth-child(2n) .feature-card {
-  background-color: var(--smoky-black-3);
-  background-color: whitesmoke;
-  border: 1px solid rgba(128, 128, 128, 0.159);
+.countdown-item {
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px; /* Fixed size for each counter box */
 }
 
-.feature-card .card-icon {
-  max-width: max-content;
-  margin-inline: auto;
-  transition: var(--transition-2);
+
+.countdown-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.feature-card:hover .card-icon {
-  transform: scale(-1) rotate(180deg);
+.countdown-number {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white; 
+  padding: 10px;
+  border-bottom: 2px double #f68c30;
 }
 
-.feature-card .card-title {
-  margin-block: 20px;
-  color: #1e87c8;
-}
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .countdown-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
-.feature-card .card-text {
-  color: var(--quick-silver);
-  line-height: var(--lineHeight-6);
+  .countdown-item {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .countdown-title {
+    font-size: 1.2rem;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
 }
 
 /*-----------------------------------*\
@@ -1531,7 +1828,7 @@ textarea.input-field {
   width: 100%;
   padding: 35px 35px 25px;
 }
-.card-content h3{
+.card-content h3 {
   color: white;
 }
 
@@ -1738,11 +2035,6 @@ textarea.input-field {
   /**
    * REUSED STYLE
    */
-
-  :is(.service, .about) .section-text {
-    max-width: 420px;
-    margin-inline: auto;
-  }
 
   .contact-number {
     --fontSize-body-1: 3rem;
