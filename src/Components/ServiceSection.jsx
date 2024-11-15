@@ -1,6 +1,7 @@
-import service1 from "../assets/images/fish1.jpeg";
-import service2 from "../assets/images/fish2.jpeg";
-import service3 from "../assets/images/fish3.jpeg";
+import service1 from "../assets/images/bg_feature1.jpg";
+import service2 from "../assets/images/bg_feature2.jpg";
+import service3 from "../assets/images/bg_feature3.jpg";
+import service4 from "../assets/images/bg_feature4.jpg";
 
 import { Link } from "react-router-dom";
 
@@ -38,7 +39,7 @@ const ServiceSection = () => {
     },
     {
       id: 3,
-      image: service3,
+      image: service4,
       alt: "Quality",
       title: "Quality",
       link: "#",

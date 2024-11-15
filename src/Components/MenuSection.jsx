@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import menu1 from "../assets/images/BlueLineSnapper.jpg";
 import menu2 from "../assets/images/Cuttlefish.jpg";
 import menu3 from "../assets/images/Emperor.jpg";
@@ -11,81 +12,142 @@ import menu9 from "../assets/images/Sardinella.jpeg";
 import menu10 from "../assets/images/Penaeus.jpg";
 import menu11 from "../assets/images/Carangoides.png";
 import menu12 from "../assets/images/Epinephelus.jpg";
+import whiteshad from "../assets/images/whiteShadFish.jpg";
+import catFish from "../assets/images/carFish.jpg";
+import BARRACUDA from "../assets/images/BarracudaFish.jpg";
+import SPOTTED from "../assets/images/spottedGruntFish.jpg";
+import YELLOWTAIL from "../assets/images/yellowTailScadFish.jpg";
+import CHUBMACKEREL from "../assets/images/CHUBMACKEREL.png";
+import INDIANMACKEREL from "../assets/images/INDIANMACKEREL.jpeg";
+import SARDINE from "../assets/images/SARDINE.jpg";
+import GREYMULLET from "../assets/images/GREYMULLET.webp";
+import CROAKER from "../assets/images/CROAKER.png";
+import SKIPJACKTUNA from "../assets/images/SKIPJACKTUNA.jpg";
 
-import { Link } from "react-router-dom";
-
-const menuData = [
+const productData = [
   {
+    id: 1,
+    name: "HORSE MACKEREL",
+    scientificName: "Trachuru Trachurus",
+    image: YELLOWTAIL,
+  },
+  {
+    id: 2,
+    name: "CHUB MACKEREL",
+    scientificName: "Scomber Japonicus",
+    image: CHUBMACKEREL,
+  },
+  {
+    id: 3,
+    name: "INDIAN MACKEREL",
+    scientificName: "Rastrelliger Kanagurta",
+    image: INDIANMACKEREL,
+  },
+  {
+    id: 4,
+    name: "YELLOW TAIL SCAD",
+    scientificName: "Atule Mate",
+    image: YELLOWTAIL,
+  },
+  {
+    id: 5,
+    name: "SARDINE",
+    scientificName: "Sardinella Longiceps",
+    image: SARDINE,
+  },
+  {
+    id: 6,
+    name: "GREY MULLET",
+    scientificName: "Mugil Cephalus",
+    image: GREYMULLET,
+  },
+  {
+    id: 7,
+    name: "WHITE SHAD FISH (HILSA)",
+    scientificName: "Tenualosa Ilisha",
+    image: whiteshad,
+  },
+  {
+    id: 8,
+    name: "CROAKER",
+    scientificName: "Argyrosomus Regius",
+    image: CROAKER,
+  },
+  {
+    id: 9,
+    name: "SKIPJACK TUNA",
+    scientificName: "Katsuwonus Pelamis",
+    image: SKIPJACKTUNA,
+  },
+  { id: 10, name: "CAT FISH", scientificName: "Siluriformes", image: catFish },
+  { id: 11, name: "BARRACUDA", scientificName: "Sphyraena", image: BARRACUDA },
+  {
+    id: 12,
+    name: "SPOTTED GRUNT",
+    scientificName: "Pomadasys Maculatus",
+    image: SPOTTED,
+  },
+  {
+    id: 13,
     name: "Blue Line Snapper",
     scientificName: "Lutjanus Spp",
-    description: "A flavorful fish known for its delicate texture.",
-    img: menu1,
+    image: menu1,
   },
   {
+    id: 14,
     name: "Cuttlefish",
     scientificName: "Sepia Pharaonis",
-    description: "Tender and savory, perfect for grilling.",
-    img: menu2,
+    image: menu2,
   },
+  { id: 15, name: "Emperor", scientificName: "Lethrinus Spp", image: menu3 },
   {
-    name: "Emperor",
-    scientificName: "Lethrinus Spp",
-    description: "Rich in flavor, ideal for seafood lovers.",
-    img: menu3,
-  },
-  {
+    id: 16,
     name: "Grouper (Hamour)",
     scientificName: "Epinephelus Spp",
-    description: "A meaty fish that's great in various dishes.",
-    img: menu4,
+    image: menu4,
   },
   {
+    id: 17,
     name: "Soldier Bream (Koffer)",
     scientificName: "Argyrops Spp",
-    description: "Sweet and mild, enjoyed grilled or fried.",
-    img: menu5,
+    image: menu5,
   },
   {
+    id: 18,
     name: "Yellowfin Tuna",
     scientificName: "Thunnus albacares",
-    description: "Known for its rich taste, perfect for sashimi.",
-    img: menu6,
+    image: menu6,
   },
   {
+    id: 19,
     name: "Lobster",
     scientificName: "Panulirus homarus",
-    description: "A luxurious delicacy, tender and sweet.",
-    img: menu7,
+    image: menu7,
   },
   {
+    id: 20,
     name: "Ribbon Fish",
     scientificName: "Trichiurus lepturus",
-    description: "Light and flaky, great for frying.",
-    img: menu8,
+    image: menu8,
   },
   {
+    id: 21,
     name: "Sardines",
     scientificName: "Sardinella longiceps",
-    description: "Nutritious and flavorful, a healthy choice.",
-    img: menu9,
+    image: menu9,
   },
+  { id: 22, name: "Shrimps", scientificName: "Penaeus Spp", image: menu10 },
   {
-    name: "Shrimps",
-    scientificName: "Penaeus Spp",
-    description: "Sweet and juicy, ideal for stir-fry.",
-    img: menu10,
-  },
-  {
+    id: 23,
     name: "Trevally",
     scientificName: "Carangoides spp",
-    description: "A versatile fish with a bold flavor.",
-    img: menu11,
+    image: menu11,
   },
   {
+    id: 24,
     name: "Red Grouper (Disco)",
     scientificName: "Epinephelus diacanthus",
-    description: "Mild and flaky, perfect for grilling.",
-    img: menu12,
+    image: menu12,
   },
 ];
 
@@ -95,54 +157,41 @@ const MenuSection = () => {
   const handleToggle = () => {
     setShowAll((prev) => !prev); // Toggle the state
   };
-
   return (
     <section className="section menu" aria-label="menu-label" id="menu">
       <div className="container">
         <p className="section-subtitle text-center label-2">Products</p>
-        <h2 className="headline-1 section-title text-center">Our Products</h2>
+        <h2 className="headline-1 text-center">Our Products</h2>
 
         <ul className="grid-list">
-          {menuData
-            .slice(0, showAll ? menuData.length : 6)
-            .map((item, index) => (
-              <li key={index}>
-                <div className="menu-card hover:card">
-                  <figure
-                    className="card-banner img-holder"
-                    style={{ "--width": 200, "--height": 150 }}
-                  >
-                    <img
-                      src={item.img}
-                    
-                      loading="lazy"
-                      alt={item.name}
-                      className="img-cover product-img"
-                    />
-                  </figure>
-                  <div>
-                    <div className="title-wrapper">
-                      <h3 className="title-3">
-                        <Link to="#" className="card-title">
-                          {item.name}
-                        </Link>
-                      </h3>
-                      <span className="label-1">{item.scientificName}</span>
-                      <p className="description">{item.description}</p>{" "}
-                      {/* Short description */}
-                    </div>
+          {productData.slice(0, showAll ? productData.length : 6).map((item, index) => (
+            <li key={index}>
+              <div className="menu-card hover:card">
+                <figure
+                  className="card-banner img-holder"
+                  style={{ "--width": 200, "--height": 150 }}
+                >
+                  <img
+                    src={item.image}
+                    loading="lazy"
+                    alt={item.name}
+                    className="img-cover product-img"
+                  />
+                </figure>
+                <div>
+                  <div className="title-wrapper">
+                    <h3 className="title-3">
+                      <Link to="#" className="menu-card-title">
+                        {item.name}
+                      </Link>
+                    </h3>
+                    <span className="label-1">{item.scientificName}</span>
                   </div>
                 </div>
-              </li>
-            ))}
+              </div>
+            </li>
+          ))}
         </ul>
-
-        <p className="menu-text text-center">
-          We are the suppliers of different types Fresh and Frozen fish products
-          in various forms, Whole Round, Gutted, Dressed, HGT, Fillets, Steaks
-          Etc.
-        </p>
-
         <button onClick={handleToggle} className="btn btn-primary">
           <span className="text text-1">
             {showAll ? "View Less" : "View All Products"}
@@ -151,8 +200,6 @@ const MenuSection = () => {
             {showAll ? "View Less" : "View All Products"}
           </span>
         </button>
-
-       
       </div>
     </section>
   );

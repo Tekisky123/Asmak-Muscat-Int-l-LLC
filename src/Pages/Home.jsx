@@ -10,6 +10,8 @@ import WhatWeOffer from "../Components/WhatWeOffer";
 import AdvantageCards from "../Components/AdvantageCards";
 import MapWithContact from "../Components/MapWithContact";
 import CountdownSection from "../Components/CountdownSection";
+import OurCoreProducts from "../Components/OurCoreProducts";
+import PartnersSlider from "../Components/PartnersSlider";
 
 const Home = () => {
   return (
@@ -22,10 +24,12 @@ const Home = () => {
       <MapWithContact/>
       <FeaturesSection />
       <CountdownSection/>
+      <OurCoreProducts/>
       <MenuSection />
       <TestimonialSection />
       <ReservationSection />
       <EventSection />
+      <PartnersSlider/>
     </>
   );
 };

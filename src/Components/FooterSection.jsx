@@ -9,10 +9,7 @@ import {
 
 const FooterSection = () => {
   return (
-    <footer
-      className="footer section has-bg-image text-center"
-    
-    >
+    <footer className="footer section has-bg-image text-center">
       <div className="container">
         <div className="footer-top grid-list">
           <div className="footer-brand has-before has-after">
@@ -22,54 +19,20 @@ const FooterSection = () => {
                 width="260"
                 height="50"
                 loading="lazy"
-                alt="asmak muscat intl home"
+                alt="Asmak Muscat Intl Logo"
               />
             </Link>
 
             <address className="body-4">
-              P.O.BOX 1741 POSTAL CODE 122 AL MABELA SULTANATE OF OMAN C.R.NO
-              1341511
+              P.O.BOX 1741, POSTAL CODE 122, AL MABELA, SULTANATE OF OMAN
             </address>
 
             <Link to="mailto:info@asmakmct.com" className="body-4 contact-link">
               info@asmakmct.com
             </Link>
-            <Link to="tel:+88123123456" className="body-4 contact-link">
-              Contact Us : <br />
-              Mobile : +968 92850600
-            </Link>
 
-            <p className="body-4 contact-link"> Tel : +968 24050604</p>
-
-            <div className="wrapper">
-              <div className="separator"></div>
-              <div className="separator"></div>
-              <div className="separator"></div>
-            </div>
-
-            <p className="title-1">Stay Connected With Us</p>
-            <p className="label-1">
-              Enter Your Email to Get{" "}
-              <span className="span">Exclusive Offers</span>
-            </p>
-
-            <form action="" className="input-wrapper">
-              <div className="icon-wrapper">
-                <input
-                  type="email"
-                  name="email_address"
-                  placeholder="Your email"
-                  autoComplete="off"
-                  className="input-field"
-                />
-              </div>
-              <button type="submit" className="btn btn-secondary">
-                <span className="text text-1">Subscribe</span>
-                <span className="text text-2" aria-hidden="true">
-                  Subscribe
-                </span>
-              </button>
-            </form>
+            <p className="body-4 contact-link">Mobile: +968 92850600</p>
+            <p className="body-4 contact-link">Tel: +968 24050604</p>
           </div>
 
           <ul className="footer-list">
@@ -96,14 +59,6 @@ const FooterSection = () => {
             </li>
             <li>
               <Link
-                to="/location"
-                className="label-2 footer-link hover-underline"
-              >
-                Location
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/contact"
                 className="label-2 footer-link hover-underline"
               >
@@ -115,7 +70,7 @@ const FooterSection = () => {
           <ul className="footer-list">
             <li>
               <Link
-                href="https://twitter.com"
+                to="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="label-2 footer-link hover-underline"
@@ -125,7 +80,7 @@ const FooterSection = () => {
             </li>
             <li>
               <Link
-                href="https://facebook.com"
+                to="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="label-2 footer-link hover-underline"
@@ -135,7 +90,7 @@ const FooterSection = () => {
             </li>
             <li>
               <Link
-                href="https://plus.google.com"
+                to="https://plus.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="label-2 footer-link hover-underline"
@@ -145,7 +100,7 @@ const FooterSection = () => {
             </li>
             <li>
               <Link
-                href="https://linkedin.com"
+                to="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="label-2 footer-link hover-underline"

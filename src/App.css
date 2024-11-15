@@ -674,7 +674,7 @@ body.nav-active {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -1346,6 +1346,115 @@ body.nav-active {
 }
 
 /*-----------------------------------*\
+  #core products
+\*-----------------------------------*/
+.core-products-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* Add padding only on larger screens */
+@media (min-width: 1024px) {
+  .core-products-section {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.core-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on large screens */
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .core-products-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 cards per row on smaller screens */
+  }
+}
+
+.core-product-card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.core-product-card:hover {
+  transform: scale(1.05); /* Slight hover zoom effect */
+}
+
+.core-product-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.core-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.core-product-card:hover .core-product-image {
+  opacity: 0.5; /* Dim the image on hover */
+}
+
+.core-product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.core-product-card:hover .core-product-overlay {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+.core-product-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.core-product-name:nth-child(2) {
+  font-size: 1.5rem;
+}
+.view-btn,
+.view-all-btn {
+  background-color: #8bb4cd;
+  border-radius: 6px;
+  padding: 6px;
+  border: none;
+}
+.view-all-button-container {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view-all-btn {
+  margin-top: 20px;
+}
+
+/*-----------------------------------*\
   #SPECIAL DISH
 \*-----------------------------------*/
 .special-dish {
@@ -1436,7 +1545,7 @@ body.nav-active {
   /* border-radius: var(--radius-24); */
 }
 
-.menu-card .card-title {
+.menu-card-title {
   transition: var(--transition-1);
   color: black;
 }
@@ -1498,7 +1607,7 @@ body.nav-active {
 .testi {
   padding-block-end: 340px;
   position: relative; /* Change to relative to position the pseudo-element */
-  background-image: url("./assets/images/ship.jpeg");
+  background-image: url("./assets/images/factory.jpg");
   background-size: cover; /* Optional: Adjusts the background size */
   background-position: center; /* Optional: Centers the background image */
 }
@@ -1540,8 +1649,11 @@ body.nav-active {
 
 .profile .img {
   margin-inline: auto;
-  border-radius: var(--radius-circle);
+  /* border-radius: var(--radius-circle); */
   margin-block-end: 15px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .testi .profile-name {
@@ -1625,6 +1737,50 @@ textarea.input-field {
 }
 
 /*-----------------------------------*\
+  #PARTNERS
+\*-----------------------------------*/
+/* Styling for the Partners Slider Section */
+.partners-slider-section {
+  padding: 50px 0;
+}
+
+.partner-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.partner-link {
+  display: block;
+  width: 100%;
+}
+
+.partner-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .partner-card {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partner-card {
+    padding: 6px;
+  }
+}
+
+/*-----------------------------------*\
   #FEATURES
 \*-----------------------------------*/
 /* Styles for the features section */
@@ -1635,7 +1791,7 @@ textarea.input-field {
 
 .features-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .section-subtitle {
@@ -1645,18 +1801,12 @@ textarea.input-field {
   margin-bottom: 1rem;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-bottom: 2rem;
-}
-
 /* Grid layout for feature items */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
   gap: 2rem;
+  margin: 40px 0;
 }
 
 .feature-item {
@@ -1667,23 +1817,27 @@ textarea.input-field {
 .feature-card {
   display: flex;
   background-color: whitesmoke;
-  padding: 1.3rem;
+  padding: 1.5rem;
   border: 1px solid whitesmoke;
   transition: all 0.4s;
+  flex-direction: row; /* Changed to horizontal layout */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
 }
 .feature-card:hover {
   background-color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
 }
 
 .card-left {
-  flex: 0 0 100px; /* Set image width */
+  flex: 0 0 80px; /* Icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 1rem;
-}
-
-.card-left img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 .card-right {
@@ -1691,18 +1845,17 @@ textarea.input-field {
   text-align: left;
 }
 
-.card-title {
-  font-size: 1.2rem;
+.card-right .card-title {
+  font-size: 2rem;
   font-weight: 600;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
-.card-text {
-  font-size: 0.9rem;
+.card-right .card-text {
+  font-size: 1.2rem;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 1rem;
 }
 
 /* Responsive design adjustments */
@@ -1711,15 +1864,10 @@ textarea.input-field {
     padding: 2rem 1rem;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-
   .features-grid {
     grid-template-columns: repeat(1, 1fr); /* 1 card per row on small screens */
     gap: 1.5rem;
   }
-
 
   .card-left {
     margin-bottom: 1rem;
@@ -1770,7 +1918,6 @@ textarea.input-field {
   width: 300px; /* Fixed size for each counter box */
 }
 
-
 .countdown-title {
   font-size: 2rem;
   font-weight: bold;
@@ -1780,7 +1927,7 @@ textarea.input-field {
 .countdown-number {
   font-size: 4.5rem;
   font-weight: 700;
-  color: white; 
+  color: white;
   padding: 10px;
   border-bottom: 2px double #f68c30;
 }

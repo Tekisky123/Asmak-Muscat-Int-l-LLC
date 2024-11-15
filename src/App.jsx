@@ -7,6 +7,7 @@ import FloatingIcons from "./Components/FloatingIcons";
 import AboutUs from "./Pages/AboutUs";
 import Product from "./Pages/Product";
 import ContactUs from "./Pages/ContactUs";
+import OurCoreProducts from "./Components/OurCoreProducts";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/products" element={<Product />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/core-product" element={<OurCoreProducts />} />
       </Routes>
 
       <FooterSection />

@@ -1,44 +1,41 @@
-import featureIcon1 from '../assets/images/delivery-truck-unscreen.gif';
-import featureIcon2 from '../assets/images/container-ship-unscreen.gif';
-import featureIcon3 from '../assets/images/aircraft-unscreen.gif';
-import featureIcon4 from '../assets/images/eco-earth-unscreen.gif'; // Add your fourth icon path
+import { FaFish, FaClock, FaStore, FaShippingFast, FaCheckCircle } from 'react-icons/fa'; // Importing required icons
 
 const featureData = [
   {
-    icon: featureIcon1,
-    alt: 'Full Service',
-    title: 'Full Service',
-    text: 'Global Network. Learn about our worldwide network. Become a partner or a client.',
+    icon: <FaFish size={50} color="#007bff" />,
+    alt: 'Fishing Zone FAO51',
+    title: 'Fishing Zone FAO51',
+    text: 'Best Seafood from Sultanate of Oman, caught in FAO51 zone.',
   },
   {
-    icon: featureIcon2,
-    alt: 'Logistics',
-    title: 'Logistics',
-    text: 'One of the most important factors. Always fresh, always on time.',
+    icon: <FaClock size={50} color="#28a745" />,
+    alt: 'Cold Store - 30 Minutes',
+    title: 'Cold Store',
+    text: 'Our products are kept in cold storage for up to 30 minutes after catch.',
   },
   {
-    icon: featureIcon3,
-    alt: 'Warehouses',
-    title: 'Warehouses',
-    text: 'Professional equipment is key. We work to maintain standards.',
+    icon: <FaShippingFast size={50} color="#dc3545" />,
+    alt: 'Packing - 12 HOURS CATCH',
+    title: 'Packing - 12 HOURS CATCH',
+    text: 'Seafood is packed within 12 hours of being caught.',
   },
   {
-    icon: featureIcon4,
-    alt: 'Certification',
-    title: 'Certification',
-    text: 'We work with certified employees. We provide top-quality food.',
+    icon: <FaClock size={50} color="#ffc107" />,
+    alt: '2 Hours Trucking to Our Factory',
+    title: '2 Hours Trucking',
+    text: 'Our products are transported to the factory within 2 hours.',
   },
   {
-    icon: featureIcon1,
-    alt: 'Temperature Monitoring',
-    title: 'Temperature Monitoring',
-    text: 'The importance of the right degree for different sea products.',
+    icon: <FaStore size={50} color="#17a2b8" />,
+    alt: 'Freezing - 8 Hours',
+    title: 'Freezing - 8 Hours',
+    text: 'Seafood is frozen within 8 hours of arrival at our factory.',
   },
   {
-    icon: featureIcon2,
-    alt: 'Test Kitchens',
-    title: 'Test Kitchens',
-    text: 'Cook our seafood products and see how they prove to be perfect.',
+    icon: <FaCheckCircle size={50} color="#6f42c1" />,
+    alt: '90 Minutes Processing and Quality Check',
+    title: '90 Minutes Processing & Quality Check',
+    text: 'Processed and quality checked within 90 minutes of arrival.',
   },
 ];
 
@@ -47,20 +44,14 @@ const FeaturesSection = () => {
     <section className="features-section" aria-label="features">
       <div className="features-container">
         <p className="section-subtitle">Why Choose Us</p>
-        <h2 className="headline-1">Our Strength</h2>
+        <h2 className="headline-1">Our Key Strengths</h2>
 
         <div className="features-grid">
           {featureData.map((feature, index) => (
             <div key={index} className="feature-item">
               <div className="feature-card">
                 <div className="card-left">
-                  <img
-                    src={feature.icon}
-                    width="100"
-                    height="80"
-                    loading="lazy"
-                    alt={feature.alt}
-                  />
+                  {feature.icon}
                 </div>
                 <div className="card-right">
                   <h3 className="card-title">{feature.title}</h3>

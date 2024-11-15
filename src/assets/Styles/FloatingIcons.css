@@ -1,83 +1,80 @@
 .floating-icons {
-    position: fixed;
-    top: 40%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    z-index: 99;
-  }
-  
-  .floatingicon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    position: relative;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .floatingicon::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: inherit;
-    border-radius: 50%;
-    z-index: -1;
-    animation: ripple 1.5s ease-out infinite;
-  }
-  
-  @keyframes ripple {
-    from {
-      opacity: 1;
-      transform: scale(0);
-    }
-    to {
-      opacity: 0;
-      transform: scale(3);
-    }
-  }
-  
-  .floatingicon.whatsapp {
-    background-color: #25D366;
-  }
-  
-  .floatingicon.call {
-    background-color: #0A74DA;
-  }
-  
-  .floatingicon.sms {
-    background-color: #34B7F1;
-  }
+  position: fixed;
+  top: 40%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  z-index: 99;
+}
 
+.floatingicon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+.floatingicon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 50%;
+  z-index: -1;
+  animation: ripple 1.5s ease-out infinite;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+.floatingicon.whatsapp {
+  background-color: #25D366;
+}
+
+.floatingicon.call {
+  background-color: #0A74DA;
+}
+
+.floatingicon.email {
+  background-color: #FF6B6B;
+}
 
 .floatingicon .tooltip {
-    visibility: hidden;
-    width: 120px;
-    background-color: #74afe5d1;
-    color: #fff;
-    text-align: center;
-    padding: 5px ;
-    border-radius: 5px;
-    position: absolute;
-    top: 50%;
-    right: 60px;
-    transform: translateY(-50%);
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-size: 12px;
-  }
-  
-  .floatingicon:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  
+  visibility: hidden;
+  width: 130px;
+  background-color: #74afe5d1;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 12px;
+}
+
+.floatingicon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
