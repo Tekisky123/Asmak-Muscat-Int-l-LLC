@@ -1,54 +1,71 @@
+import "../assets/Styles/AboutUs.css";
+import img1 from "../assets/Images/factory.jpg";
+import img2 from "../assets/Images/office.jpg";
+import img3 from "../assets/Images/ship.png";
+import img4 from "../assets/Images/Quality.jpg"
+import AdvantageCards from "../Components/AdvantageCards";
+import FeaturesSection from "../Components/FeaturesSection";
 
-import '../assets/Styles/AboutUs.css';
-import { FaFish, FaGlobeAmericas, FaHandshake, FaIndustry, FaMapMarkerAlt } from 'react-icons/fa';
-import AboutSection from '../Components/AboutSection';
-
-const aboutData = [
-  {
-    title: "Our Location",
-    icon: <FaMapMarkerAlt />,
-    content: "Located in the Sultanate of Oman on the shores of the Arabian Sea, Asmak Muscat Int'l operates in the Indian Ocean, recognized to be one of the world’s most unpolluted marine environments.",
-  },
-  {
-    title: "Corporate Social Responsibility",
-    icon: <FaHandshake />,
-    content: "Our CSR policy is to support and work directly with the local fishing community, to maintain sustainability and the best source of fresh quality fish.",
-  },
-  {
-    title: "Operations",
-    icon: <FaIndustry />,
-    content: "Our activities include processing and packing frozen seafood, wholesale and retail of fresh and frozen seafood, import and export of seafood, and sourcing agents for overseas buyers and sellers.",
-  },
-  {
-    title: "Global Reach",
-    icon: <FaGlobeAmericas />,
-    content: "We have a long list of clients in Oman, UAE, Egypt, China, India, Japan, Vietnam, Bangladesh, and Europe.",
-  },
-  {
-    title: "Our Mission",
-    icon: <FaFish />,
-    content: "At Asmak Muscat Int'l, our aim is to develop long-term relationships with our customers. We strive to meet their needs through assurance, receptiveness, and reliability.",
-  }
-];
-
-const AboutUs = () => {
+const AboutUsComponent = () => {
   return (
     <>
-    <div className="about-us-container">
-      <h1 className="about-us-title">About Us</h1>
-      <div className="about-us-content">
-        {aboutData.map((section, index) => (
-          <div key={index} className="about-us-card">
-            <div className="icon-container">{section.icon}</div>
-            <h2 className="card-title">{section.title}</h2>
-            <p className="card-content">{section.content}</p>
+      <div className="about-container container mt-5 mb-5">
+        <div className="contentLeft">
+          <div className="row">
+            <div className="imgWrapper">
+              <img src={img1} alt="Sourcing Image" />
+            </div>
+            <div className="imgWrapper">
+              <img src={img2} alt="Supply Image" />
+            </div>
+            <div className="imgWrapper">
+              <img src={img3} alt="Products Image" />
+            </div>
+            <div className="imgWrapper">
+              <img src={img4} alt="About Us Image" />
+            </div>
           </div>
-        ))}
+        </div>
+
+        {/* Right Section - Text Content */}
+        <div className="contentRight">
+          <div className="content">
+            <h2 className="headline-1">Asmak Muscat Int&apos;l LLC</h2>
+            <p>
+              Established in 2018, <strong>Asmak Muscat Int&apos;l LLC</strong>{" "}
+              is led by a founder with over 22 years of experience in the
+              seafood industry. Operating from the pristine waters of Oman in
+              the Indian Ocean (FAO51), we specialize in sourcing high-quality
+              seafood products while maintaining sustainable and eco-friendly
+              practices.
+            </p>
+            <p>
+              Our commitment extends beyond sourcing premium quality fish. We
+              aim to develop long-term relationships with our clients across
+              Oman, the UAE, Qatar, Bahrain, India, and numerous other countries
+              by supplying high-quality products tailored to their needs.
+            </p>
+            <p>
+              With a wide range of seafood, including pelagic fish, we cater to
+              global demands while ensuring our products meet the highest
+              quality standards.
+            </p>
+            <div className="view-all-button-container">
+              <button className="btn btn-secondary">
+                <span className="text text-1">Read More</span>
+                <span className="text text-2" aria-hidden="true">
+                  Read More
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <AboutSection />
+        <AdvantageCards />
+        <FeaturesSection />
+
     </>
   );
 };
 
-export default AboutUs;
+export default AboutUsComponent;

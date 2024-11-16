@@ -5,8 +5,7 @@
     max-width: 1200px;
     margin: auto;
     margin-top: 150px;
-    font-family: "Forum", cursive;
-   font-family: "DM Sans", sans-serif;
+
   }
   
   .contact-title {
@@ -28,14 +27,10 @@
     background-color: white;
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
     transition: box-shadow 0.3s ease;
   }
   
-  .details-section:hover {
-    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.6);
-  }
-  
+
   .details-section h2 {
     color: #8bb4cd;
     font-size: 2em;
@@ -56,7 +51,6 @@
     background-color: #242424;
     /* padding: 40px; */
     border-radius: 16px;
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
   }
   
   .oman-flag {
@@ -64,12 +58,9 @@
     height: 100%;
     border-radius: 12px;
     
-    transition: transform 0.3s ease;
   }
   
-  .oman-flag:hover {
-    transform: scale(1.05);
-  }
+  
   
   /* Stylish Hover Effects */
   .details-section p strong {
