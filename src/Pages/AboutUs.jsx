@@ -6,7 +6,7 @@ import img4 from "../assets/Images/Quality.jpg"
 import AdvantageCards from "../Components/AdvantageCards";
 import FeaturesSection from "../Components/FeaturesSection";
 
-const AboutUsComponent = () => {
+const AboutUs = () => {
   return (
     <>
       <div className="about-container container mt-5 mb-5">
@@ -68,4 +68,4 @@ const AboutUsComponent = () => {
   );
 };
 
-export default AboutUsComponent;
+export default AboutUs;
