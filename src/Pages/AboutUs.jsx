@@ -1,8 +1,8 @@
 import "../assets/Styles/AboutUs.css";
-import img1 from "../assets/Images/factory.jpg";
-import img2 from "../assets/Images/office.jpg";
-import img3 from "../assets/Images/ship.png";
-import img4 from "../assets/Images/Quality.jpg"
+import img1 from "../assets/images/factory.jpg";
+import img2 from "../assets/images/office.jpg";
+import img3 from "../assets/images/ship.png";
+import img4 from "../assets/images/Quality.jpg"
 import AdvantageCards from "../Components/AdvantageCards";
 import FeaturesSection from "../Components/FeaturesSection";
 
