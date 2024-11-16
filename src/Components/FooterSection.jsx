@@ -67,7 +67,7 @@ const FooterSection = () => {
             </li>
           </ul>
 
-          <ul className="footer-list">
+          <ul className=" icon-list">
             <li>
               <Link
                 to="https://twitter.com"
@@ -75,7 +75,7 @@ const FooterSection = () => {
                 rel="noopener noreferrer"
                 className="label-2 footer-link hover-underline"
               >
-                <FaTwitter className="icon" /> Twitter
+                <FaTwitter className="icon" /> 
               </Link>
             </li>
             <li>
@@ -85,7 +85,7 @@ const FooterSection = () => {
                 rel="noopener noreferrer"
                 className="label-2 footer-link hover-underline"
               >
-                <FaFacebookF className="icon" /> Facebook
+                <FaFacebookF className="icon" /> 
               </Link>
             </li>
             <li>
@@ -95,7 +95,7 @@ const FooterSection = () => {
                 rel="noopener noreferrer"
                 className="label-2 footer-link hover-underline"
               >
-                <FaGooglePlusG className="icon" /> Google+
+                <FaGooglePlusG className="icon" /> 
               </Link>
             </li>
             <li>
@@ -105,7 +105,7 @@ const FooterSection = () => {
                 rel="noopener noreferrer"
                 className="label-2 footer-link hover-underline"
               >
-                <FaLinkedinIn className="icon" /> LinkedIn
+                <FaLinkedinIn className="icon" /> 
               </Link>
             </li>
           </ul>

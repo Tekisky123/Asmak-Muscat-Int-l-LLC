@@ -2114,6 +2114,11 @@ textarea.input-field {
   right: 0;
 }
 
+.icon-list{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .footer-brand .logo {
   max-width: max-content;
   margin-inline: auto;
