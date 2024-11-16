@@ -65,7 +65,7 @@ const HeroSection = () => {
                 className="img-cover"
               />
             </div>
-            <p className="label-2 section-subtitle slider-reveal">
+            <p className="label-2  slider-reveal">
               {item.subtitle}
             </p>
             <h1 className="display-1 hero-title slider-reveal">
