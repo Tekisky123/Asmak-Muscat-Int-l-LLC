@@ -2,9 +2,7 @@ import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import {
-  IoLocationOutline,
-  IoCallOutline,
-  IoMailOutline,
+ 
   IoCloseOutline,
   IoMenuOutline,
 } from "react-icons/io5";
@@ -67,7 +65,7 @@ const HeaderSection = () => {
 
   return (
     <>
-      <div className="topbar">
+      {/* <div className="topbar">
         <div className="container">
           <address className="topbar-item">
             <div className="icon">
@@ -94,12 +92,12 @@ const HeaderSection = () => {
             <span className="span">info@asmakmct.com</span>
           </Link>
         </div>
-      </div>
+      </div> */}
 
       <header className="header" data-header>
         <div className="container">
           <Link to="/" className="logo">
-            <img src={logo} width="200" height="50" alt="logo" />
+            <img src={logo} width="250" height="60" alt="logo" />
           </Link>
 
           <nav className="navbar" data-navbar>
@@ -112,7 +110,7 @@ const HeaderSection = () => {
             </button>
 
             <Link to="/" className="logo">
-              <img src={logo} width="160" height="50" alt="logo" />
+              <img src={logo} width="250" height="60" alt="logo" />
             </Link>
 
             <ul className="navbar-list">
@@ -144,10 +142,10 @@ const HeaderSection = () => {
             </ul>
           </nav>
 
-          <Link to="" className="btn btn-secondary">
-            <span className="text text-1">Explore Our Seafood</span>
+          <Link to="/gallery" className="btn btn-secondary">
+            <span className="text text-1">Gallery</span>
             <span className="text text-2" aria-hidden="true">
-              Explore Our Seafood
+              Gallery
             </span>
           </Link>
 

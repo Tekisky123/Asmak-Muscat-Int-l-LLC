@@ -1,29 +1,39 @@
 import { useEffect, useState } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-import heroSlider1 from "../assets/images/slides_1.jpg";
-import heroSlider2 from "../assets/images/slides_2.jpg";
-import heroSlider3 from "../assets/images/slides_3.jpg";
+import heroSlider1 from "../assets/images/slider-1.jpg";
+import heroSlider2 from "../assets/images/slider-2.jpg";
+import heroSlider3 from "../assets/images/slider-3.jpg";
+import heroSlider4 from "../assets/images/slider-6.jpg";
 
 const HeroSection = () => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);
   const heroSliderItems = [
     {
       bgImage: heroSlider1,
-      subtitle: "Sustainability & Quality",
-      title: "Fresh Seafood from the Arabian Sea",
-      text: "Located in the Sultanate of Oman, we are committed to providing the best quality seafood while supporting local fishing communities.",
+      subtitle: "",
+      title: "Welcome To",
+      text: "Asmak Muscat Int'l.",
     },
     {
       bgImage: heroSlider2,
       subtitle: "Our Operations",
-      title: "Processing, Import, and Export",
-      text: "Engaged in the processing and packing of frozen seafood, we cater to wholesale and retail markets.",
+      title: "Processing and Export",
+      text: "Specialized in processing and export, we proudly serve wholesale customers with top-quality products.",
+    },
+    {
+      bgImage: heroSlider4,
+      subtitle: "Global Reach",
+      title: "Welcome To",
+      text: "Asmak Muscat Int'l.",
     },
     {
       bgImage: heroSlider3,
       subtitle: "Global Reach",
       title: "Building Long-Term Relationships",
-      text: "With clients across Oman, UAE, Egypt, and beyond, we ensure reliability and quality service.",
+      text: `Oman, UAE, Qatar,
+Baharian , Iraq, Egypt, India, Bangladesh, Thailand, Malyasia,
+Ghana, Benin, Togo, Cote d'Ivory, Senegal, Mozambique, Haiti,
+Cameroon, Guinea, Congo, Liberia, South Africa and many more.`,
     },
   ];
 
@@ -53,7 +63,9 @@ const HeroSection = () => {
       <ul className="hero-slider">
         {heroSliderItems.map((item, index) => (
           <li
-            className={`slider-item ${index === currentSlidePos ? "active" : ""}`}
+            className={`slider-item ${
+              index === currentSlidePos ? "active" : ""
+            }`}
             key={index}
           >
             <div className="slider-bg">
@@ -65,9 +77,7 @@ const HeroSection = () => {
                 className="img-cover"
               />
             </div>
-            <p className="label-2  slider-reveal">
-              {item.subtitle}
-            </p>
+            <p className="label-2  slider-reveal">{item.subtitle}</p>
             <h1 className="display-1 hero-title slider-reveal">
               {item.title.split("\n").map((line, i) => (
                 <span key={i}>
@@ -76,8 +86,7 @@ const HeroSection = () => {
                 </span>
               ))}
             </h1>
-            <p className="body-2 hero-text slider-reveal">{item.text}</p>
-           
+            <p className="-2 hero-text slider-reveal">{item.text}</p>
           </li>
         ))}
       </ul>
@@ -95,7 +104,6 @@ const HeroSection = () => {
       >
         <IoChevronForward className="ion-icon" />
       </button>
-      
     </section>
   );
 };

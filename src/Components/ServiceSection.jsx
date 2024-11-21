@@ -1,7 +1,7 @@
 import service1 from "../assets/images/bg_feature1.jpg";
-import service2 from "../assets/images/bg_feature2.jpg";
-import service3 from "../assets/images/bg_feature3.jpg";
-import service4 from "../assets/images/bg_feature4.jpg";
+import service2 from "../assets/images/partner.jpg";
+import service3 from "../assets/images/fish1.jpeg";
+import service4 from "../assets/images/Frozen.webp";
 
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const ServiceSection = () => {
       image: service1,
       alt: "Leader",
       title: "Leader",
-      link: "#",
+      link: "/leader",
       linkText: "Seafood",
       width: 285,
       height: 336,
@@ -22,7 +22,7 @@ const ServiceSection = () => {
       image: service2,
       alt: "Partner",
       title: "Partner",
-      link: "#",
+      link: "/partners",
       linkText: "Sustainable",
       width: 285,
       height: 336,
@@ -32,7 +32,7 @@ const ServiceSection = () => {
       image: service3,
       alt: "Product",
       title: "Product",
-      link: "#",
+      link: "/products",
       linkText: "World Class",
       width: 285,
       height: 336,
@@ -42,7 +42,7 @@ const ServiceSection = () => {
       image: service4,
       alt: "Quality",
       title: "Quality",
-      link: "#",
+      link: "/event",
       linkText: "Control",
       width: 285,
       height: 336,

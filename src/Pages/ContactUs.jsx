@@ -1,6 +1,7 @@
 import "../assets/Styles/ContactUs.css";
 import ReservationSection from "../Components/ReservationSection";
 import TestimonialSection from "../Components/TestimonialSection";
+import omanFlag from "../assets/images/oman.png"
 
 const ContactUs = () => {
   return (
@@ -29,7 +30,7 @@ const ContactUs = () => {
           <div className="flag-section">
             {/* Oman Flag Image */}
             <img
-              src="https://www.asmakmct.com/images/oman-flag.jpg"
+              src={omanFlag}
               alt="Oman Flag"
               className="oman-flag"
             />

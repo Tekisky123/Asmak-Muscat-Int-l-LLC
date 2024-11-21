@@ -6,12 +6,12 @@ import AboutSection from "../Components/AboutSection";
 import TestimonialSection from "../Components/TestimonialSection";
 import FeaturesSection from "../Components/FeaturesSection";
 import EventSection from "../Components/EventSection";
-import WhatWeOffer from "../Components/WhatWeOffer";
+// import WhatWeOffer from "../Components/WhatWeOffer";
 import AdvantageCards from "../Components/AdvantageCards";
 import MapWithContact from "../Components/MapWithContact";
 import CountdownSection from "../Components/CountdownSection";
 import OurCoreProducts from "../Components/OurCoreProducts";
-import PartnersSlider from "../Components/PartnersSlider";
+// import PartnersSlider from "../Components/PartnersSlider";
 
 const Home = () => {
   return (
@@ -19,17 +19,17 @@ const Home = () => {
       <HeroSection />
       <ServiceSection />
       <AboutSection />
-      <WhatWeOffer/>
+      {/* <WhatWeOffer/> */}
       <AdvantageCards/>
-      <MapWithContact/>
       <FeaturesSection />
       <CountdownSection/>
       <OurCoreProducts/>
       <MenuSection />
+      <EventSection />
       <TestimonialSection />
       <ReservationSection />
-      <EventSection />
-      <PartnersSlider/>
+      <MapWithContact/>
+      {/* <PartnersSlider/> */}
     </>
   );
 };

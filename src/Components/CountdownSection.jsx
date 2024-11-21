@@ -35,38 +35,37 @@ const CountdownSection = () => {
           <div className="countdown-item">
             {isInView && (
               <CountUp
+                suffix="+"
                 start={0}
-                end={324}
+                end={22}
                 duration={3}
                 delay={0}
                 className="countdown-number"
                 key={isInView ? "countup1" : undefined}
               />
             )}
-            <div className="countdown-title">
-              varieties of shrimp, mussels, lobster & finfish
-            </div>
+            <div className="countdown-title">varieties of Fishes</div>
           </div>
           <div className="countdown-item">
             {isInView && (
               <CountUp
                 start={0}
-                end={32}
+                suffix="+"
+                end={22}
                 duration={3}
                 delay={0}
                 className="countdown-number"
                 key={isInView ? "countup2" : undefined}
               />
             )}
-            <div className="countdown-title">
-              countries exported to and imported from
-            </div>
+            <div className="countdown-title">countries</div>
           </div>
           <div className="countdown-item">
             {isInView && (
               <CountUp
+                suffix="sq"
                 start={0}
-                end={2870}
+                end={1500}
                 duration={3}
                 delay={0}
                 className="countdown-number"

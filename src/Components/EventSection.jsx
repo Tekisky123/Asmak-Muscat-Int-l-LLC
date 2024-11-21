@@ -1,7 +1,6 @@
-import eventImage1 from '../assets/images/Seafood Quality.jpg';
+import eventImage1 from '../assets/images/product-one.png';
 import eventImage2 from '../assets/images/Frozen.webp';
-import eventImage3 from '../assets/images/Quality.jpg';
-import { Link } from 'react-router-dom';
+import eventImage3 from '../assets/images/products-pro-4.jpg';
 
 const EventSection = () => {
   return (
@@ -82,10 +81,10 @@ const EventSection = () => {
           </li>
         </ul>
 
-        <Link to="" className="btn btn-primary">
+        {/* <Link to="" className="btn btn-primary">
           <span className="text text-1">Learn More</span>
           <span className="text text-2" aria-hidden="true">Learn More</span>
-        </Link>
+        </Link> */}
       </div>
     </section>
   );

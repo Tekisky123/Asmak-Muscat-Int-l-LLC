@@ -894,14 +894,14 @@ body.nav-active {
 
 .hero .slider-item {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   display: grid;
   place-content: center;
-  padding-block-start: 100px;
+  /* padding-block-start: 100px; */
   opacity: 0;
   visibility: hidden;
   transition: var(--transition-3);
@@ -955,7 +955,7 @@ body.nav-active {
 }
 
 .hero-text {
-  margin-block: 10px 40px;
+  margin-block: 10px 50px;
 }
 
 .hero .btn {
@@ -1032,21 +1032,24 @@ body.nav-active {
 
 .hero-title span {
   margin: 0 20px;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .hero-text {
-  margin: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+ 
+  
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-title span {
-    font-size: 40px; /* Adjust title size for smaller screens */
+    font-size: 30px; /* Adjust title size for smaller screens */
   }
 
   .hero-text {
-    margin: 5px 10px; /* Reduce margins for smaller screens */
+    margin: 10px 10px; /* Reduce margins for smaller screens */
   }
 
   .hero-btn {
@@ -1057,7 +1060,7 @@ body.nav-active {
 
 @media (max-width: 480px) {
   .hero-title span {
-    font-size: 30px; /* Further adjust title size for very small screens */
+    font-size: 40px; /* Further adjust title size for very small screens */
   }
 }
 /* Service Section Styling */
@@ -1350,119 +1353,121 @@ body.nav-active {
 /*-----------------------------------*\
   #core products
 \*-----------------------------------*/
+/* Core Products Section */
 .core-products-section {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
+  padding: 3rem;
   text-align: center;
-  margin: 30px 0;
+  background: #f8f9fa;
 }
 
-/* Add padding only on larger screens */
-@media (min-width: 1024px) {
-  .core-products-section {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+.core-products-section .headline-1{
+  margin: 20px 0;
 }
 
+
+/* Grid Layout */
 .core-products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on large screens */
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust min-width if needed */
 }
 
-@media (max-width: 768px) {
+/* Display 3 cards per row on large screens */
+@media (min-width: 1024px) {
   .core-products-grid {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* 2 cards per row on smaller screens */
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
   }
 }
 
+/* Display 2 cards per row on small screens */
+@media (max-width: 768px) {
+  .core-products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+  .core-product-card{
+    margin: 0;
+  }
+}
+
+/* Core Product Card Styles */
 .core-product-card {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  background: #fff;
+  border-radius: 8px;
+  margin: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 300px; /* Fixed card height */
 }
 
 .core-product-card:hover {
-  transform: scale(1.05); /* Slight hover zoom effect */
-}
-
-.core-product-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 250px;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .core-product-image {
   width: 100%;
-  height: 100%;
+  height: 150px; /* Fixed image height */
   object-fit: cover;
-  transition: opacity 0.3s ease;
+  border-radius: 8px 8px 0 0;
 }
 
-.core-product-card:hover .core-product-image {
-  opacity: 0.5; /* Dim the image on hover */
-}
-
+/* Core Product Overlay */
 .core-product-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.core-product-card:hover .core-product-overlay {
-  opacity: 1; /* Show the overlay on hover */
+  padding: 1rem;
+  text-align: center;
 }
 
 .core-product-name {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.scientific-name {
+  font-size: 1rem;
+  color: black;
+}
+
+/* View Details Button */
+.view-details-btn {
+  background: #8bb4cd;
   color: #fff;
-  text-align: center;
-}
-.core-product-name:nth-child(2) {
-  font-size: 1.5rem;
-}
-.view-btn,
-.view-all-btn {
-  background-color: #8bb4cd;
-  border-radius: 6px;
-  padding: 6px;
   border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0.5rem auto;
+  cursor: pointer;
+  width: 90%;
+  transition: background 0.3s ease;
 }
-.view-all-button-container {
-  margin-top: 40px;
+
+.view-details-btn:hover {
+  background: #77c4f3;
+}
+
+.view-all-button-container{
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 20px 0;
 }
-.view-all-btn {
-  margin-top: 20px;
+.view-all-button-container button{
+ margin: 20px 0;
+  color: white;
 }
 
+/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1471,56 +1476,68 @@ body.nav-active {
 
 .modal-content {
   background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
+  border-radius: 8px;
+  padding: 2rem;
   max-width: 500px;
+  width: 90%;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.3s ease-in-out;
-  color: black;
+  animation: fadeIn 0.3s ease;
+}
 
+.modal-image {
+  width: 100%;
+  border-radius: 8px;
+  /* margin-bottom: 1rem; */
 }
 
 .product-table {
+  /* margin: 1rem 0; */
   width: 100%;
-  margin-top: 20px;
   border-collapse: collapse;
 }
 
 .product-table th,
 .product-table td {
   border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
+  color: black;
+  padding: 0.5rem;
 }
 
 .product-table th {
-  background-color:#8bb4cd;
+  background: #8bb4cd;
 }
 
 .close-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color:#8bb4cd;
+  margin-top: 1rem;
+  background: #ff6b6b;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .close-btn:hover {
-  background-color:#2c3941;
+  background: #e63939;
 }
 
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.9);
   }
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+ 
+  .core-product-card{
+    margin: 0;
   }
 }
 
@@ -1964,13 +1981,27 @@ textarea.input-field {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./assets/images/bg_counters.jpg");
+  background-image: url("./assets/images/service-3-540x432.jpg");
   background-size: cover;
-
+  background-position: center; /* Ensure the image is centered */
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1; /* Ensure the overlay is above the image */
 }
+
+/* Add a dimming effect using a semi-transparent overlay */
+.countdown-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  z-index: -1; /* Place the dim layer behind the content */
+}
+
 
 .countdown-container {
   display: flex;
@@ -2359,9 +2390,7 @@ textarea.input-field {
    * HEADER
    */
 
-  .header {
-    top: 51px;
-  }
+  
 
   .header.active {
     top: 0;

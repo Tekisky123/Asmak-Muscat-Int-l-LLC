@@ -2,7 +2,7 @@ import "../assets/Styles/AboutUs.css";
 import img1 from "../assets/images/factory.jpg";
 import img2 from "../assets/images/office.jpg";
 import img3 from "../assets/images/ship.png";
-import img4 from "../assets/images/Quality.jpg"
+import img4 from "../assets/images/product-one.png";
 import AdvantageCards from "../Components/AdvantageCards";
 import FeaturesSection from "../Components/FeaturesSection";
 
@@ -42,28 +42,22 @@ const AboutUs = () => {
             <p>
               Our commitment extends beyond sourcing premium quality fish. We
               aim to develop long-term relationships with our clients across
-              Oman, the UAE, Qatar, Bahrain, India, and numerous other countries
-              by supplying high-quality products tailored to their needs.
+              Oman, UAE, Qatar, Baharian , Iraq, Egypt, India, Bangladesh,
+              Thailand, Malyasia, Ghana, Benin, Togo, Cote d&apos;Ivory,
+              Senegal, Mozambique, Haiti, Cameroon, Guinea, Congo, Liberia,
+              South Africaand numerous other countries by supplying high-quality
+              products tailored to their needs.
             </p>
             <p>
               With a wide range of seafood, including pelagic fish, we cater to
               global demands while ensuring our products meet the highest
               quality standards.
             </p>
-            <div className="view-all-button-container">
-              <button className="btn btn-secondary">
-                <span className="text text-1">Read More</span>
-                <span className="text text-2" aria-hidden="true">
-                  Read More
-                </span>
-              </button>
-            </div>
           </div>
         </div>
       </div>
-        <AdvantageCards />
-        <FeaturesSection />
-
+      <AdvantageCards />
+      <FeaturesSection />
     </>
   );
 };
