@@ -139,7 +139,14 @@ const HeaderSection = () => {
                   <span className="span">Contact Us</span>
                 </Link>
               </li>
+              <li className="navbar-item gallery-text">
+                <Link to="/gallery" className={isActive("/gallery")} data-nav-toggler>
+                  <span className="span">Gallery</span>
+                </Link>
+              </li>
+              
             </ul>
+            
           </nav>
 
           <Link to="/gallery" className="btn btn-secondary">

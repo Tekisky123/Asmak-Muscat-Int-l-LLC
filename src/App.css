@@ -877,6 +877,10 @@ body.nav-active {
   pointer-events: all;
 }
 
+.gallery-text{
+  display: none;
+}
+
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
@@ -1055,6 +1059,9 @@ body.nav-active {
   .hero-btn {
     width: 90px; /* Adjust button size for smaller screens */
     height: 90px; /* Adjust button size for smaller screens */
+  }
+  .gallery-text{
+    display: block;
   }
 }
 
