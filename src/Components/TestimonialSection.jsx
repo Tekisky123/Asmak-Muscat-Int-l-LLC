@@ -9,7 +9,7 @@ const TestimonialSection = () => {
         {/* <div className="quote">”</div> */}
 
         <p className="headline-2 testi-text">
-          Best Sealood From Sultanate of Oman
+          Best Seafood From Sultanate of Oman
         </p>
 
         <div className="wrapper">

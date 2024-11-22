@@ -5,7 +5,7 @@ import image3 from "../assets/images/bg_feature1.jpg";
 import image4 from "../assets/images/treadfinBreamFish.jpg";
 import image5 from "../assets/images/barracudaModel11.png";
 import image6 from "../assets/images/barracudaModel11.png";
-
+// import image7 from "../../public/images/bg_counters.jpg"
 
 // Gallery images and data array
 const galleryImages = [
@@ -15,6 +15,7 @@ const galleryImages = [
   { src: image4, title: "Treadfin Bream Fish", description: "Description for fish image" },
   { src: image5, title: "Barracuda Model", description: "Description for Barracuda model" },
   { src: image6, title: "Barracuda Model", description: "Description for Barracuda model" },
+  // { src: image7, title: "Barracuda Model", description: "Description for Barracuda model" },
 
 ];
 

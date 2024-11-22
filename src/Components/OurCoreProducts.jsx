@@ -155,7 +155,7 @@ const OurCoreProducts = () => {
   const handleCardClick = (product) => {
     setSelectedProduct(product);
   };
-0
+  0;
   const closeModal = () => {
     setSelectedProduct(null);
   };
@@ -196,21 +196,21 @@ const OurCoreProducts = () => {
             <h3>{selectedProduct.name}</h3>
             <h4>{selectedProduct.scientificName}</h4>
             <table className="product-table">
-  <tbody>
-    {Array.from(
-      { length: Math.ceil(selectedProduct.sizes.length / 2) }, // Calculate the number of rows needed
-      (_, rowIndex) => (
-        <tr key={rowIndex}>
-          {selectedProduct.sizes
-            .slice(rowIndex * 2, rowIndex * 2 + 2) // Get two items per row
-            .map((size, colIndex) => (
-              <td key={colIndex}>{size}</td>
-            ))}
-        </tr>
-      )
-    )}
-  </tbody>
-</table>
+              <tbody>
+                {Array.from(
+                  { length: Math.ceil(selectedProduct.sizes.length / 2) },
+                  (_, rowIndex) => (
+                    <tr key={rowIndex}>
+                      {selectedProduct.sizes
+                        .slice(rowIndex * 2, rowIndex * 2 + 2)
+                        .map((size, colIndex) => (
+                          <td key={colIndex}>{size}</td>
+                        ))}
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </table>
 
             {/* <button className="close-btn" onClick={closeModal}>
               Close
