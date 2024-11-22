@@ -44,7 +44,7 @@ const CountdownSection = () => {
                 key={isInView ? "countup1" : undefined}
               />
             )}
-            <div className="countdown-title">varieties of Fishes</div>
+            <div className="countdown-title">Varieties of Fishes</div>
           </div>
           <div className="countdown-item">
             {isInView && (
@@ -58,7 +58,7 @@ const CountdownSection = () => {
                 key={isInView ? "countup2" : undefined}
               />
             )}
-            <div className="countdown-title">countries</div>
+            <div className="countdown-title">Countries</div>
           </div>
           <div className="countdown-item">
             {isInView && (
@@ -73,7 +73,7 @@ const CountdownSection = () => {
               />
             )}
             <div className="countdown-title">
-              thousand sq. feet of frozen storage space
+              Large Frozen <br />Storage Space
             </div>
           </div>
         </div>

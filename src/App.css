@@ -960,6 +960,8 @@ body.nav-active {
 
 .hero-text {
   margin-block: 10px 50px;
+  width: 600px;
+  text-align: center;
 }
 
 .hero .btn {
@@ -1054,7 +1056,11 @@ body.nav-active {
 
   .hero-text {
     margin: 10px 10px; /* Reduce margins for smaller screens */
+    width: auto;
+
   }
+
+  
 
   .hero-btn {
     width: 90px; /* Adjust button size for smaller screens */
@@ -1489,6 +1495,7 @@ body.nav-active {
   width: 90%;
   text-align: center;
   animation: fadeIn 0.3s ease;
+  color: black;
 }
 
 .modal-image {
@@ -1498,20 +1505,32 @@ body.nav-active {
 }
 
 .product-table {
-  /* margin: 1rem 0; */
   width: 100%;
   border-collapse: collapse;
+  text-align: center;
+  margin: 1rem 0;
+  color: black;
 }
 
-.product-table th,
 .product-table td {
-  border: 1px solid #ddd;
-  color: black;
+  border: 1px solid black;
   padding: 0.5rem;
+  width: 50%; /* Two columns */
+  box-sizing: border-box;
+  
+}
+
+
+.product-table tr {
+  height: 2rem; /* Ensure rows have consistent height */
+  background-color:#a0c4daac;
 }
 
 .product-table th {
-  background: #8bb4cd;
+  background-color: #5ab5ed;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .close-btn {
@@ -1802,6 +1821,7 @@ body.nav-active {
   padding: 40px 20px 30px;
   background-color: whitesmoke;
   border: 1px solid rgba(128, 128, 128, 0.108);
+  color: black;
 }
 
 .input-field[type="date"] {

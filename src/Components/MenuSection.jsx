@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import menu1 from "../assets/images/BlueLineSnapper.jpg";
 import menu2 from "../assets/images/Cuttlefish.jpg";
@@ -81,11 +81,7 @@ const productData = [
 ];
 
 const MenuSection = () => {
-  const [showAll, setShowAll] = useState(false); // State to manage the visibility of all menu items
 
-  const handleToggle = () => {
-    setShowAll((prev) => !prev); // Toggle the state
-  };
   return (
     <section className="section menu" aria-label="menu-label" id="menu">
       <div className="container">
@@ -93,7 +89,7 @@ const MenuSection = () => {
         <h2 className="headline-1 text-center">Our Products</h2>
 
         <ul className="grid-list">
-          {productData.slice(0, showAll ? productData.length : 6).map((item, index) => (
+          {productData.map((item, index) => (
             <li key={index}>
               <div className="menu-card hover:card">
                 <figure
@@ -121,14 +117,14 @@ const MenuSection = () => {
             </li>
           ))}
         </ul>
-        <button onClick={handleToggle} className="btn btn-primary">
+        {/* <button onClick={handleToggle} className="btn btn-primary">
           <span className="text text-1">
             {showAll ? "View Less" : "View All Products"}
           </span>
           <span className="text text-2" aria-hidden="true">
             {showAll ? "View Less" : "View All Products"}
           </span>
-        </button>
+        </button> */}
       </div>
     </section>
   );

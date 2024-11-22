@@ -55,7 +55,7 @@ const ReservationSection = () => {
         <div className="form reservation-form bg-black-10">
           <form onSubmit={handleSubmit} className="form-left">
             <h2 className="headline-1 text-center">Contact Us</h2>
-            <p className="card-title text-center">Get in touch with us today!</p>
+            <p className="text-center contact-label">Get in touch with us today!</p>
 
             <div className="input-wrapper">
               <input

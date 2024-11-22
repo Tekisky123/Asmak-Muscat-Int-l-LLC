@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+// import { useNavigate, useLocation } from "react-router-dom";
 import whiteshad from "../assets/images/whiteShadFish.jpg";
 import catFish from "../assets/images/carFish.jpg";
 import BARRACUDA from "../assets/images/BarracudaFish.jpg";
@@ -145,17 +145,17 @@ const productData = [
 ];
 
 const OurCoreProducts = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const navigate = useNavigate();
+  // const location = useLocation();
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const productsToShow =
-    location.pathname === "/" ? productData.slice(0, 6) : productData;
+  // const productsToShow =
+  //   location.pathname === "/" ? productData.slice(0, 6) : productData;
 
   const handleCardClick = (product) => {
     setSelectedProduct(product);
   };
-
+0
   const closeModal = () => {
     setSelectedProduct(null);
   };
@@ -164,7 +164,7 @@ const OurCoreProducts = () => {
     <section className="core-products-section">
       <h2 className="headline-1">Our Core Products</h2>
       <div className="core-products-grid">
-        {productsToShow.map((product) => (
+        {productData.map((product) => (
           <div className="core-product-card" key={product.id}>
             <img
               src={product.image}
@@ -196,19 +196,22 @@ const OurCoreProducts = () => {
             <h3>{selectedProduct.name}</h3>
             <h4>{selectedProduct.scientificName}</h4>
             <table className="product-table">
-              <thead>
-                <tr>
-                  <th>Size</th>
-                </tr>
-              </thead>
-              <tbody>
-                {selectedProduct.sizes.map((size, index) => (
-                  <tr key={index}>
-                    <td>{size}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+  <tbody>
+    {Array.from(
+      { length: Math.ceil(selectedProduct.sizes.length / 2) }, // Calculate the number of rows needed
+      (_, rowIndex) => (
+        <tr key={rowIndex}>
+          {selectedProduct.sizes
+            .slice(rowIndex * 2, rowIndex * 2 + 2) // Get two items per row
+            .map((size, colIndex) => (
+              <td key={colIndex}>{size}</td>
+            ))}
+        </tr>
+      )
+    )}
+  </tbody>
+</table>
+
             {/* <button className="close-btn" onClick={closeModal}>
               Close
             </button> */}
@@ -216,7 +219,7 @@ const OurCoreProducts = () => {
         </div>
       )}
 
-      {location.pathname === "/" && (
+      {/* {location.pathname === "/" && (
         <div className="view-all-button-container">
           <button
             onClick={() => navigate("/core-product")}
@@ -225,7 +228,7 @@ const OurCoreProducts = () => {
             View All
           </button>
         </div>
-      )}
+      )} */}
     </section>
   );
 };

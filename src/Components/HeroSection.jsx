@@ -3,7 +3,6 @@ import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import heroSlider1 from "../assets/images/slider-1.jpg";
 import heroSlider2 from "../assets/images/slider-2.jpg";
 import heroSlider3 from "../assets/images/slider-3.jpg";
-import heroSlider4 from "../assets/images/slider-6.jpg";
 
 const HeroSection = () => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);
@@ -20,12 +19,7 @@ const HeroSection = () => {
       title: "Processing and Export",
       text: "Specialized in processing and export, we proudly serve wholesale customers with top-quality products.",
     },
-    {
-      bgImage: heroSlider4,
-      subtitle: "Global Reach",
-      title: "Welcome To",
-      text: "Asmak Muscat Int'l.",
-    },
+  
     {
       bgImage: heroSlider3,
       subtitle: "Global Reach",
@@ -86,7 +80,7 @@ Cameroon, Guinea, Congo, Liberia, South Africa and many more.`,
                 </span>
               ))}
             </h1>
-            <p className="-2 hero-text slider-reveal">{item.text}</p>
+            <p className=" hero-text slider-reveal">{item.text}</p>
           </li>
         ))}
       </ul>
