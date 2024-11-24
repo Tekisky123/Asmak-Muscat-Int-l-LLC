@@ -51,24 +51,24 @@ const countries = [
 const Partners = () => {
   return (
     <section className="partners-section">
-      <h2 className="headline-1">Our Global Partners</h2>
-      <div className="partners-grid">
-        {countries.map((country, index) => (
-          <div key={index} className="partner-card">
+    <h2 className="headline-1">Our Global Partners</h2>
+    <div className="partners-grid">
+      {countries.map((country, index) => (
+        <div key={index}>
+          <div className="partner-card">
             <div className="partner-image-container">
               <img
                 src={country.image}
                 alt={country.name}
                 className="partner-image"
               />
-              <div className="overlay">
-                <span className="country-name">{country.name}</span>
-              </div>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+          <div className="country-name">{country.name}</div>
+        </div>
+      ))}
+    </div>
+  </section>
   );
 };
 

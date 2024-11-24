@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { Link } from "react-router-dom";
 import menu1 from "../assets/images/BlueLineSnapper.jpg";
 import menu2 from "../assets/images/Cuttlefish.jpg";
@@ -13,118 +12,45 @@ import menu10 from "../assets/images/Penaeus.jpg";
 import menu11 from "../assets/images/Carangoides.png";
 import menu12 from "../assets/images/Epinephelus.jpg";
 
-
 const productData = [
-  
-  {
-    id: 13,
-    name: "Blue Line Snapper",
-    scientificName: "Lutjanus Spp",
-    image: menu1,
-  },
-  {
-    id: 14,
-    name: "Cuttlefish",
-    scientificName: "Sepia Pharaonis",
-    image: menu2,
-  },
-  { id: 15, name: "Emperor", scientificName: "Lethrinus Spp", image: menu3 },
-  {
-    id: 16,
-    name: "Grouper (Hamour)",
-    scientificName: "Epinephelus Spp",
-    image: menu4,
-  },
-  {
-    id: 17,
-    name: "Soldier Bream (Koffer)",
-    scientificName: "Argyrops Spp",
-    image: menu5,
-  },
-  {
-    id: 18,
-    name: "Yellowfin Tuna",
-    scientificName: "Thunnus albacares",
-    image: menu6,
-  },
-  {
-    id: 19,
-    name: "Lobster",
-    scientificName: "Panulirus homarus",
-    image: menu7,
-  },
-  {
-    id: 20,
-    name: "Ribbon Fish",
-    scientificName: "Trichiurus lepturus",
-    image: menu8,
-  },
-  {
-    id: 21,
-    name: "Sardines",
-    scientificName: "Sardinella longiceps",
-    image: menu9,
-  },
-  { id: 22, name: "Shrimps", scientificName: "Penaeus Spp", image: menu10 },
-  {
-    id: 23,
-    name: "Trevally",
-    scientificName: "Carangoides spp",
-    image: menu11,
-  },
-  {
-    id: 24,
-    name: "Red Grouper (Disco)",
-    scientificName: "Epinephelus diacanthus",
-    image: menu12,
-  },
+  { id: 13, name: "Blue Line Snapper", image: menu1 },
+  { id: 14, name: "Cuttlefish", image: menu2 },
+  { id: 15, name: "Emperor", image: menu3 },
+  { id: 16, name: "Grouper (Hamour)", image: menu4 },
+  { id: 17, name: "Soldier Bream (Koffer)", image: menu5 },
+  { id: 18, name: "Yellowfin Tuna", image: menu6 },
+  { id: 19, name: "Lobster", image: menu7 },
+  { id: 20, name: "Ribbon Fish", image: menu8 },
+  { id: 21, name: "Sardines", image: menu9 },
+  { id: 22, name: "Shrimps", image: menu10 },
+  { id: 23, name: "Trevally", image: menu11 },
+  { id: 24, name: "Red Grouper (Disco)", image: menu12 },
 ];
 
 const MenuSection = () => {
-
   return (
-    <section className="section menu" aria-label="menu-label" id="menu">
-      <div className="container">
-        <p className="section-subtitle text-center label-2">Products</p>
-        <h2 className="headline-1 text-center">Our Products</h2>
-
+    <section className="menu" id="menu">
+      <div className="menu-container">
+        <h2 className="headline-1 text-center">Discover our products</h2>
         <ul className="grid-list">
           {productData.map((item, index) => (
-            <li key={index}>
-              <div className="menu-card hover:card">
-                <figure
-                  className="card-banner img-holder"
-                  style={{ "--width": 200, "--height": 150 }}
-                >
-                  <img
-                    src={item.image}
-                    loading="lazy"
-                    alt={item.name}
-                    className="img-cover product-img"
-                  />
-                </figure>
-                <div>
-                  <div className="title-wrapper">
-                    <h3 className="title-3">
-                      <Link to="#" className="menu-card-title">
-                        {item.name}
-                      </Link>
-                    </h3>
-                    <span className="label-1">{item.scientificName}</span>
-                  </div>
-                </div>
-              </div>
+            <li key={index} className="menu-card">
+              <figure className="menu-card-banner">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  loading="lazy"
+                  className="menu-img-cover"
+                />
+                <figcaption className="card-title-menu">
+                  <Link to="#" className="menu-card-title">
+                    {item.name}
+                  </Link>
+                </figcaption>
+              </figure>
             </li>
           ))}
         </ul>
-        {/* <button onClick={handleToggle} className="btn btn-primary">
-          <span className="text text-1">
-            {showAll ? "View Less" : "View All Products"}
-          </span>
-          <span className="text text-2" aria-hidden="true">
-            {showAll ? "View Less" : "View All Products"}
-          </span>
-        </button> */}
       </div>
     </section>
   );

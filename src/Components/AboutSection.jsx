@@ -5,7 +5,7 @@ const AboutSection = () => {
     <section className="centered-about-section">
       <div className="centered-container">
         <div className="text-content">
-          <h2 className="headline-1 section-title">Seafood Excellence Since Inception</h2>
+          <h2 className="headline-1 ">Seafood Excellence Since Inception</h2>
           <p className="section-text">
             Asmak Muscat Int&apos;l has been a cornerstone in the seafood
             industry, committed to delivering the highest quality seafood

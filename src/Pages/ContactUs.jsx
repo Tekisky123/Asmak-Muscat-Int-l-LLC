@@ -1,5 +1,4 @@
 import "../assets/Styles/ContactUs.css";
-import ReservationSection from "../Components/ReservationSection";
 import TestimonialSection from "../Components/TestimonialSection";
 import omanFlag from "../assets/images/oman.png"
 
@@ -7,7 +6,6 @@ const ContactUs = () => {
   return (
     <>
       <TestimonialSection />
-      <ReservationSection />{" "}
       <div className="contact-container">
         <h1 className="contact-title">Contact Us</h1>
         <div className="contact-details">

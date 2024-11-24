@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import Loader from "./Loader"; // Import the Loader component
+import Loader from "./Loader"; 
 
 const ReservationSection = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +11,7 @@ const ReservationSection = () => {
     subject: "",
     message: "",
   });
-  const [loading, setLoading] = useState(false); // Loader state
+  const [loading, setLoading] = useState(false); 
 
   const handleChange = (e) => {
     setFormData({
@@ -51,8 +51,8 @@ const ReservationSection = () => {
     <section className="reservation">
       {loading && <Loader />} {/* Display loader when loading is true */}
 
-      <div className="testi-container container">
-        <div className="form reservation-form bg-black-10">
+      <div className="testi-container ">
+        <div className="form reservation-form ">
           <form onSubmit={handleSubmit} className="form-left">
             <h2 className="headline-1 text-center">Contact Us</h2>
             <p className="text-center contact-label">Get in touch with us today!</p>
@@ -110,7 +110,7 @@ const ReservationSection = () => {
               </span>
             </button>
           </form>
-
+{/* 
           <div className="form-right text-center">
             <h2 className="headline-1 text-center">Contact Details</h2>
             <p className="contact-label">Mobile</p>
@@ -149,7 +149,7 @@ const ReservationSection = () => {
 
             <p className="contact-label">Need more details?</p>
             <p className="body-4">Contact us and we’ll call you back.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

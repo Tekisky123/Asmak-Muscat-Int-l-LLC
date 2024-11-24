@@ -1,4 +1,5 @@
 import avatar from "../assets/images/logo.png";
+import ReservationSection from "./ReservationSection";
 const TestimonialSection = () => {
   return (
     <section
@@ -12,11 +13,6 @@ const TestimonialSection = () => {
           Best Seafood From Sultanate of Oman
         </p>
 
-        <div className="wrapper">
-          {/* <div className="separator"></div>
-          <div className="separator"></div>
-          <div className="separator"></div> */}
-        </div>
 
         <div className="profile">
           <img
@@ -29,6 +25,8 @@ const TestimonialSection = () => {
           />
         </div>
       </div>
+      <ReservationSection />
+
     </section>
   );
 };

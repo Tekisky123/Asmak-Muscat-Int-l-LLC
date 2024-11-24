@@ -1,45 +1,66 @@
+import { useState, useEffect, useRef } from "react";
 import "../assets/Styles/GalleryPage.css";
-import image1 from "../assets/images/aboutimg.png";
-import image2 from "../assets/images/aboutimg2.png";
-import image3 from "../assets/images/bg_feature1.jpg";
-import image4 from "../assets/images/treadfinBreamFish.jpg";
-import image5 from "../assets/images/barracudaModel11.png";
-import image6 from "../assets/images/barracudaModel11.png";
-// import image7 from "../../public/images/bg_counters.jpg"
 
-// Gallery images and data array
-const galleryImages = [
-  { src: image1, title: "About Image 1", description: "Description for image 1" },
-  { src: image2, title: "About Image 2", description: "Description for image 2" },
-  { src: image3, title: "Feature Image", description: "Description for feature image" },
-  { src: image4, title: "Treadfin Bream Fish", description: "Description for fish image" },
-  { src: image5, title: "Barracuda Model", description: "Description for Barracuda model" },
-  { src: image6, title: "Barracuda Model", description: "Description for Barracuda model" },
-  // { src: image7, title: "Barracuda Model", description: "Description for Barracuda model" },
+const folderPath = "/GalleryImages";
+const extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
 
-];
+const generateImagePaths = (count) => {
+  return Array.from({ length: count }, (_, i) => ({
+    id: i + 1,
+    baseName: `${folderPath}/image${i + 1}`,
+    title: `Image ${i + 1}`,
+    description: `Description for image ${i + 1}`,
+  }));
+};
 
 const GalleryPage = () => {
-  // const [modalData, setModalData] = useState(null);
+  const [galleryImages, setGalleryImages] = useState([]);
+  const galleryGridRef = useRef(null);
 
-  // const openModal = (imageData) => {
-  //   setModalData(imageData);
-  // };
+  useEffect(() => {
+    const validatedImages = [];
+    generateImagePaths(50).forEach((image) => {
+      let validPath = null;
+      for (const ext of extensions) {
+        const testPath = `${image.baseName}${ext}`;
+        const img = new Image();
+        img.src = testPath;
 
-  // const closeModal = () => {
-  //   setModalData(null);
-  // };
+        img.onload = () => {
+          validPath = testPath;
+          validatedImages.push({
+            src: validPath,
+            title: image.title,
+            description: image.description,
+            height: img.height,
+            width: img.width,
+          });
+          setGalleryImages([...validatedImages]);
+        };
 
-  // const handleOutsideClick = (e) => {
-  //   if (e.target.classList.contains("custom-modal-overlay")) {
-  //     closeModal();
-  //   }
-  // };
+        img.onerror = () => {};
+
+        if (validPath) break;
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    const grid = galleryGridRef.current;
+    if (grid) {
+      const items = grid.querySelectorAll(".gallery-item");
+      items.forEach((item) => {
+        const content = item.querySelector("img");
+        const rowSpan = Math.ceil(content.naturalHeight / 150); // Adjust divisor for aspect ratio
+        item.style.gridRowEnd = `span ${rowSpan}`;
+      });
+    }
+  }, [galleryImages]);
 
   return (
     <section className="gallery-page-container">
       <h2 className="headline-1">Our Gallery</h2>
-      <div className="gallery-grid">
+      <div className="gallery-grid" ref={galleryGridRef}>
         {galleryImages.map((image, index) => (
           <div key={index} className="gallery-item">
             <img
@@ -47,28 +68,9 @@ const GalleryPage = () => {
               alt={`Gallery Image ${index + 1}`}
               className="gallery-image"
             />
-            {/* <div className="image-overlay" onClick={() => openModal(image)}>
-              <span className="overlay-text">Read More</span>
-            </div> */}
           </div>
         ))}
       </div>
-
-      {/* Modal Popup */}
-      {/* {modalData && (
-        <div
-          className="custom-modal-overlay"
-          onClick={handleOutsideClick}
-        >
-          <div className="custom-modal-content">
-            <span className="custom-close-btn" onClick={closeModal}>×</span>
-            <img src={modalData.src} alt="Modal Image" className="custom-modal-image" />
-            <h3 className="custom-modal-title">{modalData.title}</h3>
-            <p className="custom-modal-description">{modalData.description}</p>
-            <span className="close-btn" onClick={closeModal}>Close</span>
-          </div>
-        </div>
-      )} */}
     </section>
   );
 };

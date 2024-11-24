@@ -9,9 +9,9 @@ import {
 
 const FooterSection = () => {
   return (
-    <footer className="footer section has-bg-image text-center">
-      <div className="container">
-        <div className="footer-top grid-list">
+    <footer className="footer section  text-center">
+      <div className="">
+        <div className=" grid-list">
           <div className="footer-brand has-before has-after">
             <Link to="/" className="logo">
               <img

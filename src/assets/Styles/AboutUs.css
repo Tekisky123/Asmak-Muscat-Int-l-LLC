@@ -4,9 +4,9 @@
   max-width: 1370px;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns by default */
-  align-items: center;
   gap: 60px; /* Use `gap` instead of `grid-gap` for consistency */
   padding: 35px;
+  /* margin-bottom: -250px; */
 }
 
 .contentLeft,
@@ -19,6 +19,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns for images */
   gap: 10px;
+  height: 60%;
 }
 
 .contentLeft .row .imgWrapper {
@@ -27,6 +28,7 @@
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
+  height: 100%;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.15);
 }
 

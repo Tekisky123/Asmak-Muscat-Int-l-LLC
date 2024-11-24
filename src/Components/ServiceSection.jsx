@@ -38,7 +38,7 @@ const ServiceSection = () => {
       height: 336,
     },
     {
-      id: 3,
+      id: 4,
       image: service4,
       alt: "Quality",
       title: "Quality",
@@ -50,45 +50,29 @@ const ServiceSection = () => {
   ];
 
   return (
-    <section
-      className="section service bg-seafood text-center"
-      aria-label="service"
-    >
-      <div className="container">
+    <section className=" service bg-seafood" aria-label="service">
+      <div className="service-container">
         <ul className="service-section">
           {services.map((service) => (
-            <li key={service.id}>
-              <div className="service-card">
-                <Link to={service.link} className="has-before hover:shine">
-                  <figure
-                    className="card-banner img-holder"
-                    style={{
-                      "--width": `${service.width}px`,
-                      "--height": `${service.height}px`,
-                    }}
-                  >
-                    <img
-                      src={service.image}
-                      width={service.width}
-                      height={service.height}
-                      loading="lazy"
-                      alt={service.alt}
-                      className="img-cover"
-                    />
-                  </figure>
-                </Link>
-
-                <div className="card-content">
-                  <h3 className="title-4 card-title">
-                    <Link to={service.link}>{service.title}</Link>
-                  </h3>
-                  <Link
-                    to={service.link}
-                    className="btn-text hover-underline label-2"
-                  >
-                    {service.linkText}
-                  </Link>
-                </div>
+            <li key={service.id} className="service-card">
+              <Link to={service.link} className="card-link has-before hover:shine">
+                <figure className="service-card-banner service-img-holder">
+                  <img
+                    src={service.image}
+                    width={service.width}
+                    height={service.height}
+                    loading="lazy"
+                    alt={service.alt}
+                    className="service-img-cover"
+                  />
+                  <figcaption className="service-overlay-text">{service.title}</figcaption>
+                </figure>
+              </Link>
+              <div className="service-card-content">
+                {/* <h3 className="service-card-title">{service.title}</h3> */}
+                {/* <Link to={service.link} className="btn-text">
+                  {service.linkText}
+                </Link> */}
               </div>
             </li>
           ))}

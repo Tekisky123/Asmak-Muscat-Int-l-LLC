@@ -19,7 +19,7 @@ const HeroSection = () => {
       title: "Processing and Export",
       text: "Specialized in processing and export, we proudly serve wholesale customers with top-quality products.",
     },
-  
+
     {
       bgImage: heroSlider3,
       subtitle: "Global Reach",

@@ -10,41 +10,39 @@
   margin: 20px 0;
 }
 
-/* Grid for Gallery Images */
+/* Gallery Grid using Masonry Layout */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px; /* Adjust the gap between items */
   padding: 1rem;
 }
 
 /* Gallery Item Container */
 .gallery-item {
   position: relative;
-  width: 100%;
-  height: 350px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  grid-row-end: span 1; /* Default span; adjusted dynamically via JS */
 }
 
 /* Image Styling */
 .gallery-image {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  height: 100%; /* Maintain aspect ratio */
   border-radius: 8px;
 }
 
 /* Hover Effect for Image */
 .gallery-item:hover .gallery-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Overlay Styling */
+/* Optional overlay for hover */
 .image-overlay {
   position: absolute;
   top: 0;
@@ -61,102 +59,13 @@
   cursor: pointer;
 }
 
-/* Text inside the overlay */
-.overlay-text {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-/* Hover Effect for Overlay */
 .gallery-item:hover .image-overlay {
   opacity: 1;
 }
 
-/* Modal Popup Styles */
-.custom-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.custom-modal-content {
-  background-color: white;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.custom-modal-image {
-  width: 100%;
-  height: 500px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.custom-modal-title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.custom-modal-description {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.6;
-}
-
-.custom-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 2rem;
-  color: #333;
-  cursor: pointer;
-}
-
-/* Close button hover effect */
-.custom-close-btn:hover {
-  color: #f00;
-}
-
 /* Media Queries */
 @media (max-width: 768px) {
-  .gallery-title {
-    font-size: 2rem;
-  }
-
-  .custom-modal-title {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-title {
-    font-size: 1.5rem;
-  }
-
-  .custom-modal-title {
-    font-size: 1.6rem;
-  }
-
-  .custom-modal-description {
-    font-size: 1rem;
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }

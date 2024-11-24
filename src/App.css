@@ -877,7 +877,7 @@ body.nav-active {
   pointer-events: all;
 }
 
-.gallery-text{
+.gallery-text {
   display: none;
 }
 
@@ -892,7 +892,7 @@ body.nav-active {
 .hero {
   position: relative;
   padding-block: 120px;
-  min-height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -923,7 +923,7 @@ body.nav-active {
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scale(1.15);
+  /* transform: scale(1.15); */
   pointer-events: none;
   user-select: none;
   z-index: -1;
@@ -942,7 +942,7 @@ body.nav-active {
 }
 
 .hero .slider-item.active .slider-bg {
-  animation: smoothScale 7s linear forwards;
+  /* animation: smoothScale 7s linear forwards; */
 }
 
 @keyframes smoothScale {
@@ -960,7 +960,7 @@ body.nav-active {
 
 .hero-text {
   margin-block: 10px 50px;
-  width: 600px;
+  width: 700px;
   text-align: center;
 }
 
@@ -997,7 +997,7 @@ body.nav-active {
 .hero-btn::after {
   inset: 0;
   border: 1px solid var(--gold-crayola);
-  animation: rotate360 15s linear infinite;
+  animation: rotate360 25s linear infinite;
   background-color: white;
   z-index: -1;
 }
@@ -1005,6 +1005,7 @@ body.nav-active {
 .slider-reveal {
   transform: translateY(30px);
   opacity: 0;
+  font-size: 30px;
 }
 
 .hero .slider-item.active .slider-reveal {
@@ -1037,15 +1038,13 @@ body.nav-active {
 }
 
 .hero-title span {
-  margin: 0 20px;
-  font-size: 40px;
+  margin: 8px 20px;
+  font-size: 50px;
 }
 
 .hero-text {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
- 
-  
 }
 
 /* Responsive Adjustments */
@@ -1057,16 +1056,13 @@ body.nav-active {
   .hero-text {
     margin: 10px 10px; /* Reduce margins for smaller screens */
     width: auto;
-
   }
-
-  
 
   .hero-btn {
     width: 90px; /* Adjust button size for smaller screens */
     height: 90px; /* Adjust button size for smaller screens */
   }
-  .gallery-text{
+  .gallery-text {
     display: block;
   }
 }
@@ -1076,52 +1072,78 @@ body.nav-active {
     font-size: 40px; /* Further adjust title size for very small screens */
   }
 }
+
 /* Service Section Styling */
 .service-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
+  gap: 10px;
+  padding: 0;
 }
 
 .service-card {
   background: #fff;
-  border-radius: 8px;
   overflow: hidden;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  transition: transform 0.3s;
 }
 
-.service-card:hover {
-  transform: scale(1.03);
+.service-container {
+  margin: 0 10px;
 }
 
-.service-card .has-before {
-  padding-block: 30px;
-  margin-block-end: 20px;
-}
-
-.service-card .card-banner {
-  height: 300px;
+.service-card-link {
+  position: relative;
+  display: block;
   width: 100%;
-  transition: transform 0.3s;
 }
 
-.service-card .card-banner img {
+.service-card-banner {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.service .card-title {
-  margin-block-end: 12px;
-  font-size: 32px;
-  color: #8bb4cd;
+.service-overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 2.2rem;
 }
 
-.service .section-title,
-.service .section-text {
+.service-card-content {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.service-card-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.service-btn-text {
+  font-size: 1rem;
   color: #8bb4cd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.service-btn-text:hover {
+  color: #005f73;
 }
 
 /* Responsive adjustments */
@@ -1147,7 +1169,7 @@ body.nav-active {
   padding: 10px 20px;
   background-color: #f5f7f9;
   width: 100%;
-  min-height: 70vh;
+  /* min-height: 70vh; */
   align-items: center;
   box-sizing: border-box;
 }
@@ -1373,16 +1395,18 @@ body.nav-active {
   background: #f8f9fa;
 }
 
-.core-products-section .headline-1{
+.core-products-section .headline-1 {
   margin: 20px 0;
 }
-
 
 /* Grid Layout */
 .core-products-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust min-width if needed */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Adjust min-width if needed */
 }
 
 /* Display 3 cards per row on large screens */
@@ -1395,9 +1419,9 @@ body.nav-active {
 /* Display 2 cards per row on small screens */
 @media (max-width: 768px) {
   .core-products-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    grid-template-columns: repeat(1, 1fr); /* 2 cards per row */
   }
-  .core-product-card{
+  .core-product-card {
     margin: 0;
   }
 }
@@ -1412,7 +1436,7 @@ body.nav-active {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 300px; /* Fixed card height */
+  height: 350px; /* Fixed card height */
 }
 
 .core-product-card:hover {
@@ -1422,7 +1446,7 @@ body.nav-active {
 
 .core-product-image {
   width: 100%;
-  height: 150px; /* Fixed image height */
+  height: 200px; /* Fixed image height */
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
@@ -1434,14 +1458,14 @@ body.nav-active {
 }
 
 .core-product-name {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: black;
 }
 
 .scientific-name {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: black;
 }
 
@@ -1462,14 +1486,14 @@ body.nav-active {
   background: #77c4f3;
 }
 
-.view-all-button-container{
+.view-all-button-container {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
-.view-all-button-container button{
- margin: 20px 0;
+.view-all-button-container button {
+  margin: 20px 0;
   color: white;
 }
 
@@ -1517,13 +1541,11 @@ body.nav-active {
   padding: 0.5rem;
   width: 50%; /* Two columns */
   box-sizing: border-box;
-  
 }
-
 
 .product-table tr {
   height: 2rem; /* Ensure rows have consistent height */
-  background-color:#a0c4daac;
+  background-color: #a0c4daac;
 }
 
 .product-table th {
@@ -1561,12 +1583,10 @@ body.nav-active {
 }
 
 @media (max-width: 768px) {
- 
-  .core-product-card{
+  .core-product-card {
     margin: 0;
   }
 }
-
 
 /*-----------------------------------*\
   #SPECIAL DISH
@@ -1661,7 +1681,7 @@ body.nav-active {
 
 .menu-card-title {
   transition: var(--transition-1);
-  color: black;
+  /* color: black; */
 }
 
 .menu-card .card-title:is(:hover, :focus-visible) {
@@ -1713,17 +1733,97 @@ body.nav-active {
   bottom: 0;
   right: 0;
 }
+.menu .grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.menu-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  /* border-radius: 8px; */
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+}
+
+.menu-card-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* Dim the image */
+  transition: filter 0.3s ease-in-out;
+}
+
+.menu-card:hover .img-cover {
+  filter: brightness(0.5); /* Dim more on hover */
+}
+
+.card-title-menu {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+}
+
+.menu-container {
+  margin: 0 20px;
+  margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  .menu .grid-list {
+    grid-template-columns: repeat(5, 1fr); /* Five cards per row */
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu .grid-list {
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu .grid-list {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu .grid-list {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+}
 
 /*-----------------------------------*\
   #TESTIMONIALS
 \*-----------------------------------*/
 
 .testi {
-  padding-block-end: 340px;
-  position: relative; /* Change to relative to position the pseudo-element */
+  /* padding-block-end: 340px; */
   background-image: url("./assets/images/factory.jpg");
   background-size: cover; /* Optional: Adjusts the background size */
   background-position: center; /* Optional: Centers the background image */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .testi::before {
@@ -1782,7 +1882,7 @@ body.nav-active {
 \*-----------------------------------*/
 
 .reservation-form {
-  margin-block-start: -270px;
+  /* margin-block-start: -270px; */
 }
 
 .form-text {
@@ -1891,6 +1991,10 @@ textarea.input-field {
   .partner-card {
     padding: 6px;
   }
+
+  .form-left {
+    width: 80vw;
+  }
 }
 
 /*-----------------------------------*\
@@ -1908,10 +2012,11 @@ textarea.input-field {
 }
 
 .section-subtitle {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  color: #666;
-  margin-bottom: 1rem;
+  font-style: italic;
+  color: red;
+  letter-spacing: 2px;
 }
 
 /* Grid layout for feature items */
@@ -2029,7 +2134,6 @@ textarea.input-field {
   z-index: -1; /* Place the dim layer behind the content */
 }
 
-
 .countdown-container {
   display: flex;
   gap: 20rem;
@@ -2087,6 +2191,7 @@ textarea.input-field {
 
 .event .section-title {
   margin-block-end: 40px;
+  font-size: 40px;
 }
 
 .event-card {
@@ -2172,7 +2277,7 @@ textarea.input-field {
   right: 0;
 }
 
-.icon-list{
+.icon-list {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -2416,8 +2521,6 @@ textarea.input-field {
   /**
    * HEADER
    */
-
-  
 
   .header.active {
     top: 0;
@@ -2727,11 +2830,11 @@ textarea.input-field {
   /**
    * MENU
    */
-
+  /* 
   .menu .grid-list {
     position: relative;
     column-gap: 90px;
-  }
+  } */
 
   .menu .grid-list::before {
     content: "";
@@ -2757,7 +2860,7 @@ textarea.input-field {
 
   .reservation-form {
     display: grid;
-    grid-template-columns: 1fr 0.5fr;
+    /* grid-template-columns: 1fr 0.5fr; */
   }
 
   /**
@@ -2883,9 +2986,8 @@ textarea.input-field {
   /**
    * HERO
    */
-
   .hero {
-    height: 880px;
+    height: 600px;
   }
 
   .hero-btn {
@@ -2936,10 +3038,10 @@ textarea.input-field {
    * MENU
    */
 
-  .menu .grid-list {
+  /* .menu .grid-list {
     gap: 55px 200px;
     margin-block-end: 55px;
-  }
+  } */
 
   /**
    * TESTIMONIALS

@@ -8,13 +8,13 @@ import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUs";
 import OurCoreProducts from "./Components/OurCoreProducts";
 import { useEffect } from "react";
-import MenuSection from "./Components/MenuSection";
 import MapWithContact from "./Components/MapWithContact";
 import EventSection from "./Components/EventSection";
 import AboutSection from "./Components/AboutSection";
 import Partners from "./Pages/Partners";
 import GalleryPage from "./Pages/GalleryPage";
 import AdvertisementComponent from "./Components/AdvertisementComponent";
+import Product from "./Pages/Product";
 
 function App() {
   const location = useLocation();
@@ -31,7 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/products" element={<MenuSection />} />
+        <Route path="/products" element={<Product />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/location" element={<MapWithContact />} />
         <Route path="/core-product" element={<OurCoreProducts />} />
