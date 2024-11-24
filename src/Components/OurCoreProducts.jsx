@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { useNavigate, useLocation } from "react-router-dom";
 import whiteshad from "../assets/images/whiteShadFish.jpg";
 import catFish from "../assets/images/carFish.jpg";
@@ -145,20 +145,31 @@ const productData = [
 ];
 
 const OurCoreProducts = () => {
-  // const navigate = useNavigate();
-  // const location = useLocation();
   const [selectedProduct, setSelectedProduct] = useState(null);
-
-  // const productsToShow =
-  //   location.pathname === "/" ? productData.slice(0, 6) : productData;
 
   const handleCardClick = (product) => {
     setSelectedProduct(product);
   };
-  0;
+
   const closeModal = () => {
     setSelectedProduct(null);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    // Add event listener
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <section className="core-products-section">
@@ -211,24 +222,9 @@ const OurCoreProducts = () => {
                 )}
               </tbody>
             </table>
-
-            {/* <button className="close-btn" onClick={closeModal}>
-              Close
-            </button> */}
           </div>
         </div>
       )}
-
-      {/* {location.pathname === "/" && (
-        <div className="view-all-button-container">
-          <button
-            onClick={() => navigate("/core-product")}
-            className="btn btn-secondary"
-          >
-            View All
-          </button>
-        </div>
-      )} */}
     </section>
   );
 };
