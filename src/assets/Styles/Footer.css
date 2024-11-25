@@ -1,0 +1,108 @@
+/* General Footer Styling */
+.footer-container {
+    background-color: #f5f5f5; /* Light gray background for better visibility */
+    color: black;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; /* Increased spacing for better alignment */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-brand {
+    flex: 1;
+    min-width: 240px; /* Slightly larger minimum width for better alignment */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .footer-logo {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  
+  .footer-logo-img {
+    width: 160px;
+  }
+  
+  .footer-address,
+  .footer-email,
+  .footer-contact {
+    font-size: 14px;
+    line-height: 1.6; /* Improved line spacing for better readability */
+    margin-bottom: 5px;
+  }
+  
+  /* Footer Links */
+  .footer-links {
+    list-style: none;
+    flex: 1;
+    min-width: 150px;
+    text-align: left; /* Align links to the left */
+    padding: 0;
+  }
+  
+  .footer-link {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 8px 0;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #1d9bf0; /* Light Blue Highlight */
+  }
+  
+  /* Social Icons */
+  .footer-socials {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Increased spacing between icons */
+    justify-content: center;
+  }
+  
+  .social-link {
+    font-size: 20px; /* Slightly larger icon size */
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #1d9bf0; /* Light Blue Highlight */
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd; /* Separator for better visual hierarchy */
+    padding-top: 10px;
+  }
+  
+  .footer-copy {
+    font-size: 12px;
+    color: #555; /* Slightly darker gray for better contrast */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center; /* Center align on smaller screens */
+    }
+  
+    .footer-brand,
+    .footer-links,
+    .footer-socials {
+      min-width: 100%;
+    }
+  }
+  
