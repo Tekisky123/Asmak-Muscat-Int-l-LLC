@@ -10,7 +10,6 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    animation: fadeIn 2s ease-out; /* Slow down the fade-in effect */
   }
   
   /* Popup box styling */
@@ -22,7 +21,6 @@
     padding: 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    animation: slideUp 1s ease-out; /* Slow down the slide-up effect */
     position: relative;
   }
   
@@ -53,25 +51,15 @@
     border-radius: 8px;
   }
   
-  /* Fade-in effect */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+
   
   /* Slide-up animation */
   @keyframes slideUp {
     from {
       transform: translateY(100px);
-      opacity: 0;
     }
     to {
       transform: translateY(0);
-      opacity: 1;
     }
   }
   

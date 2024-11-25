@@ -15,6 +15,7 @@ const generateImagePaths = (count) => {
 
 const GalleryPage = () => {
   const [galleryImages, setGalleryImages] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null); // For modal
   const galleryGridRef = useRef(null);
 
   useEffect(() => {
@@ -32,8 +33,6 @@ const GalleryPage = () => {
             src: validPath,
             title: image.title,
             description: image.description,
-            height: img.height,
-            width: img.width,
           });
           setGalleryImages([...validatedImages]);
         };
@@ -57,12 +56,19 @@ const GalleryPage = () => {
     }
   }, [galleryImages]);
 
+  // Close modal handler
+  const closeModal = () => setSelectedImage(null);
+
   return (
     <section className="gallery-page-container">
       <h2 className="headline-1">Our Gallery</h2>
       <div className="gallery-grid" ref={galleryGridRef}>
         {galleryImages.map((image, index) => (
-          <div key={index} className="gallery-item">
+          <div
+            key={index}
+            className="gallery-item"
+            onClick={() => setSelectedImage(image)} // Open modal with image
+          >
             <img
               src={image.src}
               alt={`Gallery Image ${index + 1}`}
@@ -71,6 +77,26 @@ const GalleryPage = () => {
           </div>
         ))}
       </div>
+
+      {/* Modal */}
+      {selectedImage && (
+        <div
+          className="gallery-modal-overlay"
+          onClick={closeModal} // Close modal on overlay click
+        >
+          <div
+            className="gallery-modal-content"
+            onClick={(e) => e.stopPropagation()} // Prevent overlay click propagation
+          >
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.title}
+              className="gallery-modal-image"
+            />
+            
+          </div>
+        </div>
+      )}
     </section>
   );
 };

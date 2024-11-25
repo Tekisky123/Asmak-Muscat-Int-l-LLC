@@ -11,16 +11,16 @@ import threadfinBreamImage from "../assets/images/treadfin.jpg";
 import blueLineSnapperImage from "../assets/images/blueline.jpg";
 
 const productData = [
-  { id: 1, name: "Yellow Fin Tuna", scientificName: "Thunnus Albacares", image: yellowfinImage },
-  { id: 2, name: "Kawa Kawa Tuna", scientificName: "Euthynnus Affinis", image: kawakawaImage },
-  { id: 3, name: "Bonito Tuna", scientificName: "Sarda Orientalis", image: bonitoImage },
-  { id: 4, name: "Emperor", scientificName: "Lethrinus Spp", image: emperorImage },
-  { id: 5, name: "Arabian Pandora", scientificName: "Pagellus Affinis", image: arabianPandoraImage },
-  { id: 6, name: "Red Seabream", scientificName: "Pagrus Pagrus", image: redSeabreamImage },
-  { id: 7, name: "Trevally", scientificName: "Caranx Spp", image: trevallyImage },
-  { id: 8, name: "Koffer", scientificName: "Evynnis Ehrenberji", image: kofferImage },
-  { id: 9, name: "Threadfin Bream", scientificName: "Nemipterus Japonicus", image: threadfinBreamImage },
-  { id: 10, name: "Blue Line Snapper", scientificName: "Lujanus Coerulineatus", image: blueLineSnapperImage },
+  { id: 1, name: "Yellow Fin Tuna", scientificName: "(Thunnus Albacares)", image: yellowfinImage },
+  { id: 2, name: "Kawa Kawa Tuna", scientificName: "(Euthynnus Affinis)", image: kawakawaImage },
+  { id: 3, name: "Bonito Tuna", scientificName: "(Sarda Orientalis)", image: bonitoImage },
+  { id: 4, name: "Emperor", scientificName: "(Lethrinus Spp)", image: emperorImage },
+  { id: 5, name: "Arabian Pandora", scientificName: "(Pagellus Affinis)", image: arabianPandoraImage },
+  { id: 6, name: "Red Seabream", scientificName: "(Pagrus Pagrus)", image: redSeabreamImage },
+  { id: 7, name: "Trevally", scientificName: "(Caranx Spp)", image: trevallyImage },
+  { id: 8, name: "Koffer", scientificName: "(Evynnis Ehrenberji)", image: kofferImage },
+  { id: 9, name: "Threadfin Bream", scientificName: "(Nemipterus Japonicus)", image: threadfinBreamImage },
+  { id: 10, name: "Blue Line Snapper", scientificName: "(Lujanus Coerulineatus)", image: blueLineSnapperImage },
 ];
 
 const MenuSection = () => {
