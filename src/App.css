@@ -1556,19 +1556,11 @@ body.nav-active {
   font-weight: bold;
 }
 
-.close-btn {
-  margin-top: 1rem;
-  background: #ff6b6b;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.close-btn:hover {
-  background: #e63939;
+.close-modal-btn{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  padding: 5px;
 }
 
 /* Animations */

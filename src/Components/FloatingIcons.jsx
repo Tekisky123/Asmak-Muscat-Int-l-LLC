@@ -11,7 +11,7 @@ const FloatingIcons = () => {
     const handleScroll = () => {
       setIsVisible(true);
       clearTimeout(timeout);
-      timeout = setTimeout(() => setIsVisible(false), 1000);
+      timeout = setTimeout(() => setIsVisible(false), 3000);
     };
 
     window.addEventListener("scroll", handleScroll);

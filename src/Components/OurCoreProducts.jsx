@@ -23,6 +23,7 @@ import whiteshadModel from "../assets/images/whiteshadModel9.png";
 import catfishModel from "../assets/images/catfishModel10.png";
 import barracudaModel from "../assets/images/barracudaModel11.png";
 import spottedModel from "../assets/images/spottedModel12.png";
+import { AiOutlineClose } from "react-icons/ai";
 
 const productData = [
   {
@@ -162,14 +163,27 @@ const OurCoreProducts = () => {
       }
     };
 
-    // Add event listener
-    document.addEventListener("keydown", handleKeyDown);
+    const handleBackPress = () => {
+      if (selectedProduct) {
+        closeModal();
+        window.history.pushState(null, null, window.location.pathname);
+      }
+    };
 
-    // Cleanup event listener on component unmount
+    document.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("popstate", handleBackPress);
+
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("popstate", handleBackPress);
     };
-  }, []);
+  }, [selectedProduct]);
+
+  useEffect(() => {
+    if (selectedProduct) {
+      window.history.pushState(null, null, window.location.pathname);
+    }
+  }, [selectedProduct]);
 
   return (
     <section className="core-products-section">
@@ -199,6 +213,9 @@ const OurCoreProducts = () => {
       {selectedProduct && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal-btn" onClick={closeModal}>
+              <AiOutlineClose size={24} />
+            </button>
             <img
               src={selectedProduct.modalImage}
               alt={selectedProduct.name}
