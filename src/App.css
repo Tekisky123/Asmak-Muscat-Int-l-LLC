@@ -1448,7 +1448,7 @@ body.nav-active {
 .core-product-image {
   width: 100%;
   height: 200px; /* Fixed image height */
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
 
@@ -1773,7 +1773,7 @@ body.nav-active {
 
 .card-title-menu {
   position: absolute;
-  bottom: 40px;
+  bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
