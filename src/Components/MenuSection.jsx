@@ -27,7 +27,7 @@ const MenuSection = () => {
   return (
     <section className="menu" id="menu">
       <div className="menu-container">
-        <h2 className="headline-1 text-center">Discover our products</h2>
+        <h2 className="headline-1 text-center">Discover Our Products</h2>
         <ul className="grid-list">
           {productData.map((item) => (
             <li key={item.id} className="menu-card">

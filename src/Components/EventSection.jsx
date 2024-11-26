@@ -6,7 +6,7 @@ const EventSection = () => {
   return (
     <section className="section event" aria-label="event">
       <div className="container">
-        <p className="section-subtitle label-2 text-center">Our Quality</p>
+        {/* <p className="section-subtitle label-2 text-center">Our Quality</p> */}
         <h2 className="section-title headline-1 text-center">Our Premium Quality Products</h2>
 
         {/* "Our Quality" Content Section */}
