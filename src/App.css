@@ -1562,6 +1562,14 @@ body.nav-active {
   justify-content: end;
   padding: 5px;
 }
+.close-modal-btn .close{
+  
+  background-color: red;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
 
 /* Animations */
 @keyframes fadeIn {

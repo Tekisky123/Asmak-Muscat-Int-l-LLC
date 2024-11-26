@@ -214,7 +214,7 @@ const OurCoreProducts = () => {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-modal-btn" onClick={closeModal}>
-              <AiOutlineClose size={24} />
+              <AiOutlineClose size={30}  className="close"/>
             </button>
             <img
               src={selectedProduct.modalImage}
