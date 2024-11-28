@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-import heroSlider1 from "../assets/images/slider-1.jpg";
-import heroSlider2 from "../assets/images/slider-2.jpg";
+import heroSlider1 from "../assets/images/sliderHD.jpg";
+import heroSlider2 from "../assets/images/aboutimg22.png";
 import heroSlider3 from "../assets/images/slider-3.jpg";
 
 const HeroSection = () => {

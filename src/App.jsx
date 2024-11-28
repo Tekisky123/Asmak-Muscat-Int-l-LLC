@@ -1,7 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import FooterSection from "./Components/FooterSection";
-import HeaderSection from "./Components/HeaderSection";
 import Home from "./Pages/Home";
 import FloatingIcons from "./Components/FloatingIcons";
 import AboutUs from "./Pages/AboutUs";
@@ -15,6 +14,7 @@ import Partners from "./Pages/Partners";
 import GalleryPage from "./Pages/GalleryPage";
 import AdvertisementComponent from "./Components/AdvertisementComponent";
 import Product from "./Pages/Product";
+import Header from "./Components/Header";
 
 function App() {
   const location = useLocation();
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <HeaderSection />
+      <Header/>
       <AdvertisementComponent/>
       <FloatingIcons />
       <Routes>

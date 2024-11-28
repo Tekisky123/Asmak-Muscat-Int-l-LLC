@@ -28,7 +28,7 @@ const CountdownSection = () => {
     <section
       ref={sectionRef}
       className="countdown-section"
-      style={{ backgroundImage: "url(/path-to-your-image.jpg)" }}
+
     >
       <div className="countdown-overlay">
         <div className="countdown-container">
