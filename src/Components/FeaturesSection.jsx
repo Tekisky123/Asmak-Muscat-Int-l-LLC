@@ -43,7 +43,6 @@ const FeaturesSection = () => {
   return (
     <section className="features-section" aria-label="features">
       <div className="features-container">
-        <p className="section-subtitle">Why Choose Us</p>
         <h2 className="headline-1">Our Key Strengths</h2>
 
         <div className="features-grid">

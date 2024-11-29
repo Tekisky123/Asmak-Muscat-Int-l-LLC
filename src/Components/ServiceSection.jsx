@@ -1,7 +1,7 @@
 import service1 from "../assets/images/bg_feature1.jpg";
 import service2 from "../assets/images/partner.jpg";
-import service3 from "../assets/images/fish1.jpeg";
-import service4 from "../assets/images/Frozen.webp";
+import service3 from "../assets/images/productnew.jpg";
+import service4 from "../assets/images/qualitynew.jpg";
 
 import { Link } from "react-router-dom";
 

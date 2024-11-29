@@ -60,22 +60,7 @@ const CountdownSection = () => {
             )}
             <div className="countdown-title">Countries</div>
           </div>
-          <div className="countdown-item">
-            {isInView && (
-              <CountUp
-                suffix="sq"
-                start={0}
-                end={1500}
-                duration={3}
-                delay={0}
-                className="countdown-number"
-                key={isInView ? "countup3" : undefined}
-              />
-            )}
-            <div className="countdown-title">
-              Large Frozen <br />Storage Space
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

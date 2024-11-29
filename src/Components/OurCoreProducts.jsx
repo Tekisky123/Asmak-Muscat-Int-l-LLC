@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 // import { useNavigate, useLocation } from "react-router-dom";
-import whiteshad from "../assets/images/whiteshadFishHD.jpg";
+import whiteshad from "../assets/images/whiteshadnew.png";
 import catFish from "../assets/images/carFishHD.jpg";
 import BARRACUDA from "../assets/images/BarracudaFishHD.jpg";
 import SPOTTED from "../assets/images/spottedGruntFishHD.jpg";
 import YELLOWTAIL from "../assets/images/yellowTailScadFishHD.jpg";
 import CHUBMACKEREL from "../assets/images/chubHD.jpg";
 import INDIANMACKEREL from "../assets/images/indianHD.jpg";
-import SARDINE from "../assets/images/indianHD.jpg";
+import SARDINE from "../assets/images/sardinenew.png";
 import GREYMULLET from "../assets/images/grayHD.jpg";
 import CROAKER from "../assets/images/croakerHD.jpg";
 import SKIPJACKTUNA from "../assets/images/skipjackHD.jpg";

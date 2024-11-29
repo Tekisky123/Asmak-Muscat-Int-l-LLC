@@ -1,5 +1,5 @@
 import eventImage1 from "../assets/images/product-one.png";
-import eventImage2 from "../assets/images/Frozen.webp";
+import eventImage2 from "../assets/images/frozenfresh.jpg";
 import eventImage3 from "../assets/images/barracudaModel11.png";
 
 const EventSection = () => {

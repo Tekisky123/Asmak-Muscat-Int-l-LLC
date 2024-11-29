@@ -2,7 +2,6 @@ import HeroSection from "../Components/HeroSection";
 import MenuSection from "../Components/MenuSection";
 import ServiceSection from "../Components/ServiceSection";
 import AboutSection from "../Components/AboutSection";
-import TestimonialSection from "../Components/TestimonialSection";
 import FeaturesSection from "../Components/FeaturesSection";
 import EventSection from "../Components/EventSection";
 // import WhatWeOffer from "../Components/WhatWeOffer";
@@ -27,7 +26,6 @@ const Home = () => {
       <MenuSection />
       <EventSection />
       <Partners/>
-      <TestimonialSection />
       <MapWithContact/>
       {/* <PartnersSlider/> */}
     </>

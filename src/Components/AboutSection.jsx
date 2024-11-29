@@ -1,4 +1,4 @@
-import img from "../assets/images/bg_welcome.jpg";
+import img from "../assets/images/aboutnew.jpg";
 
 const AboutSection = () => {
   return (

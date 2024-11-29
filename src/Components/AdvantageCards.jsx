@@ -1,5 +1,5 @@
-import service1 from "../assets/images/service-1-540x432.jpg";
-import service2 from "../assets/images/service-2-540x432.jpg";
+import service1 from "../assets/images/marketplace.jpg";
+import service2 from "../assets/images/staff.jpg";
 import service3 from "../assets/images/service-3-540x432.jpg";
 import service4 from "../assets/images/service-4-540x432.jpg";
 const AdvantageCards = () => {

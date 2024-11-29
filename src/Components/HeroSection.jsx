@@ -1,25 +1,25 @@
 import { useEffect, useState } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-import heroSlider1 from "../assets/images/sliderHD.jpg";
-import heroSlider2 from "../assets/images/aboutimg22.png";
-import heroSlider3 from "../assets/images/slider-3.jpg";
+import heroSlider1 from "../assets/images/slidernew.png";
+import heroSlider2 from "../assets/images/factorynew.jpg";
+import heroSlider3 from "../assets/images/boatnew.jpg";
 
 const HeroSection = () => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);
   const heroSliderItems = [
     {
-      bgImage: heroSlider1,
+      bgImage: heroSlider2,
       subtitle: "",
       title: "Welcome To",
-      text: "Asmak Muscat Int'l.",
+      text1: "  Asmak Muscat Int'l.",
     },
     {
-      bgImage: heroSlider2,
+      bgImage: heroSlider1,
       subtitle: "Our Operations",
-      title: "Processing and Export",
-      text: "Specialized in processing and export, we proudly serve wholesale customers with top-quality products.",
+      heading: "Processor and Exporter",
+      title: "Processor and Exporter",
+      text: "We specialize in processing and exporting, proudly delivering top-quality products to wholesale customers worldwide.",
     },
-
     {
       bgImage: heroSlider3,
       subtitle: "Global Reach",
@@ -80,7 +80,10 @@ Cameroon, Guinea, Congo, Liberia, South Africa and many more.`,
                 </span>
               ))}
             </h1>
-            <p className=" hero-text slider-reveal">{item.text}</p>
+            <h1 className="display-1 hero-title slider-reveal">
+              <span>{item.text1}</span>
+            </h1>
+            <p className="hero-text slider-reveal">{item.text}</p>
           </li>
         ))}
       </ul>

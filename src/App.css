@@ -896,18 +896,19 @@ body.nav-active {
   padding-block: 120px;
   height: 90vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero .slider-item {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 95%;
   display: grid;
   place-content: center;
-  /* padding-block-start: 100px; */
   opacity: 0;
   visibility: hidden;
   transition: var(--transition-3);
@@ -962,7 +963,7 @@ body.nav-active {
 
 .hero-text {
   margin-block: 10px 50px;
-  width: 700px;
+  width: 800px;
   text-align: center;
 }
 
@@ -1040,8 +1041,9 @@ body.nav-active {
 }
 
 .hero-title span {
-  margin: 8px 20px;
-  font-size: 50px;
+  margin:  20px;
+  font-size: 55px;
+  font-weight: 800;
 }
 
 .hero-text {
@@ -1052,7 +1054,7 @@ body.nav-active {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-title span {
-    font-size: 30px; /* Adjust title size for smaller screens */
+    font-size: 50px; /* Adjust title size for smaller screens */
   }
 
   .hero-text {
@@ -1071,7 +1073,8 @@ body.nav-active {
 
 @media (max-width: 480px) {
   .hero-title span {
-    font-size: 40px; /* Further adjust title size for very small screens */
+    font-size: 55px; /* Further adjust title size for very small screens */
+    line-height: 55px;
   }
 }
 
@@ -1313,7 +1316,7 @@ body.nav-active {
 /* Image Styling */
 .card-image {
   width: 100%;
-  /* height: 200px; */
+  height: 300px;
   object-fit: cover;
 }
 
@@ -1821,141 +1824,6 @@ body.nav-active {
   #TESTIMONIALS
 \*-----------------------------------*/
 
-.testi {
-  /* padding-block-end: 340px; */
-  background-image: url("./assets/images/factory.jpg");
-  background-size: cover; /* Optional: Adjusts the background size */
-  background-position: center; /* Optional: Centers the background image */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.testi::before {
-  content: ""; /* Required for pseudo-elements */
-  position: absolute; /* Positioning the overlay */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  z-index: 1; /* Places the overlay above the background */
-}
-
-.testi .quote {
-  font-size: 7rem;
-  font-family: var(--fontFamily-forum);
-  line-height: 0.7em;
-}
-.container {
-  z-index: 2; /* Places the text above the overlay */
-}
-.testi-container {
-  position: relative; /* Ensure the container contents are above the overlay */
-  z-index: 2; /* Places the text above the overlay */
-}
-
-.testi .wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-  margin-block: 40px 50px;
-}
-
-.testi .separator {
-  animation: rotate360 15s linear infinite;
-}
-
-.profile .img {
-  margin-inline: auto;
-  /* border-radius: var(--radius-circle); */
-  margin-block-end: 15px;
-  background-color: white;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.testi .profile-name {
-  color: var(--gold-crayola);
-  font-weight: var(--weight-bold);
-  text-transform: uppercase;
-  letter-spacing: var(--letterSpacing-3);
-}
-
-/*-----------------------------------*\
-  #RESERVATION
-\*-----------------------------------*/
-
-.reservation-form {
-  /* margin-block-start: -270px; */
-}
-
-.form-text {
-  margin-block-end: 40px;
-}
-
-.form-text .link {
-  display: inline;
-  color: var(--gold-crayola);
-}
-
-.form-right .headline-1 {
-  margin-block-end: 40px;
-}
-
-.form-right .contact-label {
-  margin-block-end: 5px;
-  color: black;
-}
-
-.form-right .separator {
-  margin: 20px auto;
-}
-
-.form-right .body-4 {
-  color: var(--quick-silver);
-  line-height: var(--lineHeight-3);
-}
-
-.form-right .body-4:not(:last-child) {
-  margin-block-end: 25px;
-}
-
-.form-left,
-.form-right {
-  padding: 40px 20px 30px;
-  background-color: whitesmoke;
-  border: 1px solid rgba(128, 128, 128, 0.108);
-  color: black;
-}
-
-.input-field[type="date"] {
-  text-transform: uppercase;
-  padding-inline-end: 10px;
-}
-
-.input-field[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-
-textarea.input-field {
-  resize: none;
-  height: 140px;
-  padding-block: 20px;
-  line-height: var(--lineHeight-1);
-}
-
-.form-left .btn {
-  max-width: 100%;
-  width: 100%;
-}
-
-.form-right {
-  background-repeat: repeat;
-  background-position: top left;
-  background-image: url(./assets/images/form-pattern.png);
-}
 
 /*-----------------------------------*\
   #PARTNERS
@@ -2008,7 +1876,7 @@ textarea.input-field {
 \*-----------------------------------*/
 /* Styles for the features section */
 .features-section {
-  padding: 3rem 1rem;
+  /* padding: 3rem 1rem; */
   text-align: center;
 }
 

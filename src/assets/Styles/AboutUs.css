@@ -6,6 +6,7 @@
   grid-template-columns: repeat(2, 1fr); /* Two columns by default */
   gap: 60px; /* Use `gap` instead of `grid-gap` for consistency */
   padding: 35px;
+  height: 80vh;
   /* margin-bottom: -250px; */
 }
 
@@ -105,6 +106,12 @@
 
   .contentRight .content h2 {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 1253px) {
+  .about-container{
+    height: auto;
   }
 }
 
