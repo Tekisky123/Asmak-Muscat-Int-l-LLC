@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
-import { MdClose } from "react-icons/md"; 
+import { MdClose } from "react-icons/md";
 import "../assets/Styles/AdvertisementComponent.css";
 
 const folderPath = "/EventImages";
-const extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"]; 
+const extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
 
 const AdvertisementComponent = () => {
-  const [isAdVisible, setIsAdVisible] = useState(false); 
-  const [adImage, setAdImage] = useState(null); 
+  const [isAdVisible, setIsAdVisible] = useState(false);
+  const [adImage, setAdImage] = useState(null);
 
   useEffect(() => {
     let foundImage = null;
 
     extensions.forEach((ext) => {
-      const testPath = `${folderPath}/event${ext}`;
+      const timestamp = new Date().getTime();
+      const testPath = `${folderPath}/event${ext}?v=${timestamp}`;
       const img = new Image();
       img.src = testPath;
 
@@ -21,18 +22,16 @@ const AdvertisementComponent = () => {
         if (!foundImage) {
           foundImage = testPath;
           setAdImage(foundImage);
-          setIsAdVisible(true); // Show ad only if an image is valid
+          setIsAdVisible(true);
         }
       };
 
-      img.onerror = () => {
-        // Handle error silently for unsupported extensions
-      };
+      img.onerror = () => {};
     });
   }, []);
 
   const closeAd = () => {
-    setIsAdVisible(false); // Hide popup
+    setIsAdVisible(false);
   };
 
   return (
@@ -40,13 +39,9 @@ const AdvertisementComponent = () => {
       {isAdVisible && adImage && (
         <div className="ad-overlay" onClick={closeAd}>
           <div className="ad-popup" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={adImage} // Dynamic ad image
-              alt="Advertisement"
-              className="ad-image"
-            />
+            <img src={adImage} alt="Advertisement" className="ad-image" />
             <button className="add-close-btn" onClick={closeAd}>
-              <MdClose size={30} /> {/* Close icon */}
+              <MdClose size={30} />
             </button>
           </div>
         </div>
