@@ -10,6 +10,8 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  opacity: 0; /* Start with hidden */
+  animation: fadeIn 0.5s ease forwards; /* Smooth fade-in animation */
 }
 
 /* Popup box styling */
@@ -22,6 +24,9 @@
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   position: relative;
+  transform: translateY(100px); /* Start below */
+  opacity: 0; /* Start hidden */
+  animation: slideUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards; /* Smooth ease-out */
 }
 
 /* Close button styling */
@@ -33,13 +38,18 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  /* border-radius: 8px; */
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: white;
   cursor: pointer;
   background: red;
   border: none;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  width: 40px;
+  height: 40px;
+}
+
+.add-close-btn:hover {
+  transform: scale(1.1); /* Slight scale on hover */
 }
 
 /* Ad image styling */
@@ -51,10 +61,22 @@
 
 /* Slide-up animation */
 @keyframes slideUp {
-  from {
+  0% {
     transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade-in animation for overlay */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
   to {
-    transform: translateY(0);
+    opacity: 1;
   }
 }
