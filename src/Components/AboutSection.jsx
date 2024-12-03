@@ -10,9 +10,8 @@ const AboutSection = () => {
             Asmak Muscat Int&apos;l has been a cornerstone in the seafood
             industry, committed to delivering the highest quality seafood
             sourced directly from Oman’s pristine waters. Our journey began with
-            a vision to provide fresh, frozen, and expertly handled seafood to
-            local and global markets, adhering to sustainability and quality at
-            every step.
+            a vision to provide frozen, and expertly handled seafood to global
+            markets, adhering to sustainability and quality at every step.
           </p>
         </div>
         <div className="image-content">

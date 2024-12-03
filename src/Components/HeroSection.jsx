@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import heroSlider1 from "../assets/images/slidernew.png";
-import heroSlider2 from "../assets/images/factorynew.jpg";
+import heroSlider2 from "../assets/images/factorynew2.jpg";
 import heroSlider3 from "../assets/images/boatnew.jpg";
 
 const HeroSection = () => {
@@ -16,7 +16,7 @@ const HeroSection = () => {
     {
       bgImage: heroSlider1,
       subtitle: "Our Operations",
-      heading: "Processor and Exporter",
+      heading: "of Frozen Fish",
       title: "Processor and Exporter",
       text: "We specialize in processing and exporting, proudly delivering top-quality products to wholesale customers worldwide.",
     },
@@ -76,13 +76,16 @@ Cameroon, Guinea, Congo, Liberia, South Africa and many more.`,
               {item.title.split("\n").map((line, i) => (
                 <span key={i}>
                   {line}
-                  <br />
+                  <h1 className="display-1 hero-title slider-reveal">
+                    <span style={{ fontSize: "30px" }}>{item.heading}</span>
+                  </h1>
+                  <h1 className="display-1 hero-title slider-reveal">
+                    <span>{item.text1}</span>
+                  </h1>
                 </span>
               ))}
             </h1>
-            <h1 className="display-1 hero-title slider-reveal">
-              <span>{item.text1}</span>
-            </h1>
+
             <p className="hero-text slider-reveal">{item.text}</p>
           </li>
         ))}

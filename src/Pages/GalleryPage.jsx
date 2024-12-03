@@ -4,6 +4,9 @@ import "../assets/Styles/GalleryPage.css";
 const folderPath = "/GalleryImages";
 const extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
 
+// Function to generate unique query string for cache-busting
+const addCacheBuster = (url) => `${url}?v=${new Date().getTime()}`;
+
 const generateImagePaths = (count) => {
   return Array.from({ length: count }, (_, i) => ({
     id: i + 1,
@@ -23,18 +26,20 @@ const GalleryPage = () => {
     generateImagePaths(50).forEach((image) => {
       let validPath = null;
       for (const ext of extensions) {
-        const testPath = `${image.baseName}${ext}`;
+        const testPath = addCacheBuster(`${image.baseName}${ext}`);
         const img = new Image();
         img.src = testPath;
 
         img.onload = () => {
-          validPath = testPath;
-          validatedImages.push({
-            src: validPath,
-            title: image.title,
-            description: image.description,
-          });
-          setGalleryImages([...validatedImages]);
+          if (!validatedImages.find((img) => img.src === testPath)) {
+            validPath = testPath;
+            validatedImages.push({
+              src: validPath,
+              title: image.title,
+              description: image.description,
+            });
+            setGalleryImages([...validatedImages]);
+          }
         };
 
         img.onerror = () => {};
@@ -93,7 +98,6 @@ const GalleryPage = () => {
               alt={selectedImage.title}
               className="gallery-modal-image"
             />
-            
           </div>
         </div>
       )}

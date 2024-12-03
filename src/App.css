@@ -886,11 +886,6 @@ body.nav-active {
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
-
-.hero .slider-btn {
-  display: none;
-  background-color: white;
-}
 .hero {
   position: relative;
   padding-block: 120px;
@@ -926,11 +921,10 @@ body.nav-active {
   left: 0;
   width: 100%;
   height: 100%;
-  /* transform: scale(1.15); */
+  object-fit: cover;
   pointer-events: none;
   user-select: none;
   z-index: -1;
-  transition: opacity 0.5s ease; /* Added transition for smooth dimming */
 }
 
 .hero .slider-bg::after {
@@ -1041,7 +1035,7 @@ body.nav-active {
 }
 
 .hero-title span {
-  margin:  20px;
+  margin: 20px;
   font-size: 55px;
   font-weight: 800;
 }
@@ -1051,30 +1045,90 @@ body.nav-active {
   text-align: center;
 }
 
-/* Responsive Adjustments */
+/* Responsive Styles for Tablet Screens */
 @media (max-width: 768px) {
+  .hero {
+    height: 70vh; /* Reduce height */
+  }
+
+  .hero .slider-item {
+    height: 100%;
+  }
+
   .hero-title span {
-    font-size: 50px; /* Adjust title size for smaller screens */
+    font-size: 40px; /* Smaller title size */
+    line-height: 1.2;
   }
 
   .hero-text {
-    margin: 10px 10px; /* Reduce margins for smaller screens */
+    font-size: 16px; /* Smaller text size */
+    margin: 10px 20px;
     width: auto;
-  }
-
-  .hero-btn {
-    width: 90px; /* Adjust button size for smaller screens */
-    height: 90px; /* Adjust button size for smaller screens */
-  }
-  .gallery-text {
-    display: block;
   }
 }
 
+/* Responsive Styles for Mobile Screens */
 @media (max-width: 480px) {
+  .hero {
+    height: 35vh; /* Further reduce height */
+    margin-bottom: 20px;
+  }
+
+  .hero .slider-item {
+    height: 100%;
+  }
+
+  .hero .slider-bg img {
+    /* object-fit: fill; */
+    height: 100%;
+  }
+
   .hero-title span {
-    font-size: 55px; /* Further adjust title size for very small screens */
-    line-height: 55px;
+    font-size: 30px; /* Reduce title size further */
+    line-height: 1.1;
+  }
+
+  .hero-text {
+    font-size: 14px; /* Adjust text size */
+    margin: 5px 10px; /* Reduce spacing */
+  }
+
+
+}
+
+/* Slider Navigation Buttons */
+.hero .slider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.hero .slider-btn.prev {
+  left: 10px;
+}
+
+.hero .slider-btn.next {
+  right: 10px;
+}
+
+/* Adjust Navigation Buttons for Smaller Screens */
+@media (max-width: 480px) {
+  .hero .slider-btn {
+   display: none;
+  }
+
+  .ion-icon {
+    font-size: 20px; /* Adjust icon size */
   }
 }
 
