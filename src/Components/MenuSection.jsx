@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import yellowfinImage from "../assets/images/yellowfinn.avif";
 import kawakawaImage from "../assets/images/Kawa-Kawa-Tuna-scaled.jpg";
 import bonitoImage from "../assets/images/bonitol-web.jpg";
-import emperorImage from "../assets/images/Emperor.jpg";
+import emperorImage from "../assets/images/EmperorNew.jpg";
 import arabianPandoraImage from "../assets/images/arabian.jpg";
 import redSeabreamImage from "../assets/images/fish-red-bream.jpg";
 import trevallyImage from "../assets/images/travelly.jpg";
