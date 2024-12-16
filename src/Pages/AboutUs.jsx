@@ -1,5 +1,5 @@
 import "../assets/Styles/AboutUs.css";
-import img1 from "../assets/images/factory.jpg";
+import img1 from "../assets/images/factorynew1.jpg";
 import img2 from "../assets/images/office.jpg";
 import img3 from "../assets/images/ship.png";
 import img4 from "../assets/images/product-one.png";

@@ -112,10 +112,17 @@
 .custom-social-link:hover {
   color: #8bb4cd;
 }
-.custom-footer-bottom{
+.custom-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.custom-footer-bottom a img {
+  width: 80px;
+}
+.footer-last{
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 /* Responsive Design */
@@ -137,5 +144,4 @@
   .footer-container.custom-footer {
     background-attachment: scroll; /* Disable parallax for mobile */
   }
-  
 }

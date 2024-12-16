@@ -10,11 +10,8 @@ import "../assets/Styles/Footer.css";
 
 const FooterSection = () => {
   return (
-    <footer
-      className="footer-container custom-footer"
-    
-    >
-       <div className="custom-profile">
+    <footer className="footer-container custom-footer">
+      <div className="custom-profile">
         <img
           src={logo}
           width="200"
@@ -32,8 +29,6 @@ const FooterSection = () => {
           <p className="headline-2">Best Seafood From Sultanate of Oman</p>
         </div>
       </section>
-
-     
 
       <div className="custom-footer-content">
         {/* Brand Section */}
@@ -117,11 +112,19 @@ const FooterSection = () => {
         </ul>
       </div>
 
-      {/* Footer Bottom */}
       <div className="custom-footer-bottom">
         <p className="custom-footer-copy">
           &copy; 2019 Asmak Muscat Int&apos;l. All Rights Reserved
         </p>
+        <div className="footer-last">
+          <p> Developed by </p>
+          <a href="https://tekisky.com/">
+            <img
+              src="https://tekisky.com/assets/WhatsApp_Image_2024-04-30_at_12.39.09_86de1ffc-removebg-preview-2SydUlQw.png"
+              alt="Tekisky pvt ltd logo"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );
