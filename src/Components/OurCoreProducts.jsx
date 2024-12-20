@@ -9,7 +9,7 @@ import CHUBMACKEREL from "../assets/images/chubHD.jpg";
 import INDIANMACKEREL from "../assets/images/indianHD.jpg";
 import SARDINE from "../assets/images/sardinenew.png";
 import GREYMULLET from "../assets/images/grayHD.jpg";
-import CROAKER from "../assets/images/CroakerNew1.jpg";
+import CROAKER from "../assets/images/CroakerNew.jpg";
 import SKIPJACKTUNA from "../assets/images/skipjackHD.jpg";
 import horceModel from "../assets/images/horceModel1.png";
 import chubModel from "../assets/images/chubModel2.png";

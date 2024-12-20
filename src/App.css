@@ -1070,7 +1070,7 @@ body.nav-active {
 /* Responsive Styles for Mobile Screens */
 @media (max-width: 480px) {
   .hero {
-    height: 35vh; /* Further reduce height */
+    height: 82vh; /* Further reduce height */
     margin-bottom: 20px;
   }
 
@@ -1079,7 +1079,6 @@ body.nav-active {
   }
 
   .hero .slider-bg img {
-    /* object-fit: fill; */
     height: 100%;
   }
 

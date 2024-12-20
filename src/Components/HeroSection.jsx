@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import heroSlider1 from "../assets/images/slidernew.png";
 import heroSlider2 from "../assets/images/factorynew2.jpg";
-import heroSlider3 from "../assets/images/boatnew.jpg";
+import heroSlider3 from "../assets/images/bannerNew.png";
 
 const HeroSection = () => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);

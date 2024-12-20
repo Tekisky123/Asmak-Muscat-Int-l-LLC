@@ -29,7 +29,7 @@ const featureData = [
     icon: <FaShippingFast size={50} color="#dc3545" />,
     alt: '30 Minutes Packing to Put Inside Cold Storage',
     title: '30 Minutes Packing',
-    text: 'Seafood is packed and stored within 30 minutes of being caught.',
+    text: 'Seafood is packed and stored within 30 minutes of processing.',
   },
 ];
 
