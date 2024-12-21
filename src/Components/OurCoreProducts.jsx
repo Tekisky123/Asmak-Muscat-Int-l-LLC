@@ -9,7 +9,7 @@ import CHUBMACKEREL from "../assets/images/chubHD.jpg";
 import INDIANMACKEREL from "../assets/images/indianHD.jpg";
 import SARDINE from "../assets/images/sardinenew.png";
 import GREYMULLET from "../assets/images/grayHD.jpg";
-import CROAKER from "../assets/images/CroakerNew.jpg";
+import CROAKER from "../assets/images/newCroker.jpg";
 import SKIPJACKTUNA from "../assets/images/skipjackHD.jpg";
 import horceModel from "../assets/images/horceModel1.png";
 import chubModel from "../assets/images/chubModel2.png";
@@ -214,7 +214,7 @@ const OurCoreProducts = () => {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-modal-btn" onClick={closeModal}>
-              <AiOutlineClose size={30}  className="close"/>
+              <AiOutlineClose size={30} className="close" />
             </button>
             <img
               src={selectedProduct.modalImage}

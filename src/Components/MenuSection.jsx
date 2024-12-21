@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import yellowfinImage from "../assets/images/yellowfinn.avif";
+import yellowfinImage from "../assets/images/newfish4.jpg";
 import kawakawaImage from "../assets/images/Kawa-Kawa-Tuna-scaled.jpg";
-import bonitoImage from "../assets/images/bonitol-web.jpg";
-import emperorImage from "../assets/images/EmperorNew.jpg";
+import bonitoImage from "../assets/images/newfish1.jpg";
+import emperorImage from "../assets/images/newfish2.jpg";
 import arabianPandoraImage from "../assets/images/arabian.jpg";
 import redSeabreamImage from "../assets/images/fish-red-bream.jpg";
-import trevallyImage from "../assets/images/travelly.jpg";
+import trevallyImage from "../assets/images/newfish3.jpg";
 import kofferImage from "../assets/images/koffer.jpg";
 import threadfinBreamImage from "../assets/images/treadfin.jpg";
 import blueLineSnapperImage from "../assets/images/blueline.jpg";
