@@ -1049,6 +1049,7 @@ body.nav-active {
 @media (max-width: 768px) {
   .hero {
     height: 70vh; /* Reduce height */
+    margin-bottom: 10px;
   }
 
   .hero .slider-item {

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import { useNavigate, useLocation } from "react-router-dom";
 import whiteshad from "../assets/images/whiteshadnew.png";
 import catFish from "../assets/images/carFishHD.jpg";
 import BARRACUDA from "../assets/images/BarracudaFishHD.jpg";
