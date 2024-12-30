@@ -1071,8 +1071,12 @@ body.nav-active {
   .hero {
     height: 82vh; /* Further reduce height */
     margin-bottom: 20px;
+    background-image: url("./assets/images/tenor.gif");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: bottom;
   }
-
+ 
   .hero .slider-item {
     height: 130%;
   }
@@ -1084,13 +1088,13 @@ body.nav-active {
   .hero-title span {
     font-size: 35px; /* Reduce title size further */
     line-height: 1.1;
-    color: black;
+    /* color: black; */
   }
 
   .hero-text {
     font-size: 18px; /* Adjust text size */
     margin: 5px 10px; /* Reduce spacing */
-    color: black;
+    /* color: black; */
   }
 
   .hero .slider-bg::after {
