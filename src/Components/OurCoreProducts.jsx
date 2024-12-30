@@ -97,7 +97,7 @@ const productData = [
   {
     id: 7,
     name: "WHITE SHAD FISH (HILSA)",
-    scientificName: "Tenualosa Ilisha",
+    scientificName: "Nematalosa Nasus",
     image: whiteshad,
     sizes: ["2/4 PCS/KG", "4/6 PCS/KG", "6/8 PCS/KG", "8/10 PCS/KG"],
     modalImage: whiteshadModel,
@@ -121,7 +121,7 @@ const productData = [
   {
     id: 10,
     name: "CAT FISH",
-    scientificName: "Siluriformes",
+    scientificName: "Arius Spp",
     image: catFish,
     sizes: ["500/1000 GRM", "1000/2000 GRM", "2000/3000 GRM", "3000/5000 GRM"],
     modalImage: catfishModel,
@@ -129,7 +129,7 @@ const productData = [
   {
     id: 11,
     name: "BARRACUDA",
-    scientificName: "Sphyraena",
+    scientificName: "Sphyraena spp",
     image: BARRACUDA,
     sizes: ["500/1000 GRM", "1000/2000 GRM", "2000/3000 GRM", "3000/5000 GRM"],
     modalImage: barracudaModel,
