@@ -3,33 +3,26 @@ import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import heroSlider1 from "../assets/images/slidernew.png";
 import heroSlider2 from "../assets/images/factorynew2.jpg";
 import heroSlider3 from "../assets/images/bannerNew.png";
-import mobileHero1 from "../assets/images/MobileBanner1.jpg";
-import mobileHero2 from "../assets/images/MobileBanner2.jpg";
-import mobileHero3 from "../assets/images/MobileBanner3.jpg";
 
 const HeroSection = () => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
 
   const heroSliderItems = [
     {
-      desktopImage: heroSlider2,
-      mobileImage: mobileHero1,
+      image: heroSlider2,
       subtitle: "",
       title: "Welcome To",
       text1: "  Asmak Muscat Int'l.",
     },
     {
-      desktopImage: heroSlider1,
-      mobileImage: mobileHero2,
+      image: heroSlider1,
       subtitle: "Our Operations",
       heading: "of Frozen Fish",
       title: "Processor and Exporter",
       text: "We specialize in processing and exporting, proudly delivering top-quality products to wholesale customers worldwide.",
     },
     {
-      desktopImage: heroSlider3,
-      mobileImage: mobileHero3,
+      image: heroSlider3,
       subtitle: "Global Reach",
       title: "Building Long-Term Relationships",
       text: `Oman, UAE, Qatar, Bahrain, Iraq, Egypt, India, Bangladesh, Thailand, Malaysia, Ghana, Benin, Togo, Cote d'Ivoire, Senegal, Mozambique, Haiti, Cameroon, Guinea, Congo, Liberia, South Africa and many more.`,
@@ -52,17 +45,6 @@ const HeroSection = () => {
   };
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
     const autoSlideInterval = setInterval(slideNext, 7000);
 
     return () => clearInterval(autoSlideInterval);
@@ -73,14 +55,12 @@ const HeroSection = () => {
       <ul className="hero-slider">
         {heroSliderItems.map((item, index) => (
           <li
-            className={`slider-item ${
-              index === currentSlidePos ? "active" : ""
-            }`}
+            className={`slider-item ${index === currentSlidePos ? "active" : ""}`}
             key={index}
           >
             <div className="slider-bg">
               <img
-                src={isMobile ? item.mobileImage : item.desktopImage}
+                src={item.image}
                 width="1880"
                 height="950"
                 alt=""
